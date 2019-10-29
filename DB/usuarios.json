@@ -1,0 +1,146 @@
+[
+    {
+        "email": "numa@novusfill.com",
+        "password": "$2y$10$owC1zOjma3p1HF75bnIUMOsPFwkWve0.VCjA.dMHM7Lzt\/PBWajdK",
+        "nombre": "",
+        "apellido": "",
+        "cumpleanos": "",
+        "avatar": ""
+    },
+    {
+        "email": "numa@rere.com",
+        "password": "$2y$10$kEEjQAFT7jsrpdOk5HX8oe7Ywa.Ajdv.uWfPW55lOAV4gBDHPksvG",
+        "nombre": "antonio",
+        "apellido": "asddd",
+        "cumpleanos": "15\/07\/2019",
+        "avatar": ""
+    },
+    {
+        "email": "catabrio@horid.com",
+        "password": "$2y$10$hBuh4xXjSxIr41YHgQbq.efd8C6XBJ9vcIL0lcDWgLcDlushLSL\/C",
+        "nombre": "antonioloco",
+        "apellido": "cucucu",
+        "cumpleanos": "15\/08\/2019",
+        "avatar": ""
+    },
+    {
+        "email": "numavillador@rere.com",
+        "password": "$2y$10$\/vy113A3r1uqyhefwq.BeeyQobIbRGZJqG3YvkQcr0O2M\/VX1yItK",
+        "nombre": "jua",
+        "apellido": "ssaa",
+        "cumpleanos": "15\/09\/2020",
+        "avatar": ""
+    },
+    {
+        "email": "contope@hotmail.com",
+        "password": "$2y$10$qb\/qkvXmKni5ZHAn7vice.IPC.BQalJNlrJHR8\/J2\/L0o1OgFDB\/i",
+        "nombre": "",
+        "apellido": "",
+        "cumpleanos": "",
+        "avatar": ""
+    },
+    {
+        "email": "nva@novusfill.com",
+        "password": "$2y$10$2bTeh2PXQBkWVyk2AQUU4u.clVXLYFqhZzITtbpMtZilCR2g3fXg.",
+        "nombre": "",
+        "apellido": "",
+        "cumpleanos": "",
+        "avatar": ""
+    },
+    {
+        "email": "contope@hotmail.com",
+        "password": "$2y$10$nILiSfMQWb0M9\/XsK2KLNOGyre85Zw0jF2yemf6lgxNimBDaFhgOu",
+        "nombre": "",
+        "apellido": "",
+        "cumpleanos": "",
+        "avatar": ""
+    },
+    {
+        "email": "lisandro@hotmail.com",
+        "password": "$2y$10$E.CBaE3AASCtBX8tdm2V0OOJx386QEbtCT6Vm1OqbxyBOoNdxXjn.",
+        "nombre": "",
+        "apellido": "",
+        "cumpleanos": "",
+        "avatar": "..\/uploads\/2189.jpg"
+    },
+    {
+        "email": "ariel@hotmail.com",
+        "password": "$2y$10$qcjKEoRzT6qdZMFwzJKfou18g\/9RSuGfDMtWDM7UrZkS5HNmVaf0i",
+        "nombre": "",
+        "apellido": "",
+        "cumpleanos": "",
+        "avatar": "..\/uploads\/2189.jpg"
+    },
+    {
+        "email": "n@f.com",
+        "password": "$2y$10$ZFJD2P8nRxbNZ5jpB.vHNOQivR.tjr6cxNUjq9tvJrLvuOAjR4nAe",
+        "nombre": "",
+        "apellido": "",
+        "cumpleanos": "",
+        "avatar": "..\/uploads\/2189.jpg"
+    },
+    {
+        "email": "numita@hotmail.com",
+        "password": "$2y$10$aQ\/GMnJv452qVGLYhAb2EOIkU\/bDtifmk9yKeMMckc2asQl49EXT2",
+        "nombre": "",
+        "apellido": "",
+        "cumpleanos": "",
+        "avatar": "..\/uploads\/2189.jpg"
+    },
+    {
+        "email": "numita1@hotmail.com",
+        "password": "$2y$10$s9\/LdWmp6XiegH7m15IwhukhZDO3a6V\/vEOGclBE51kuT51Hb0YeG",
+        "nombre": "",
+        "apellido": "",
+        "cumpleanos": "",
+        "avatar": "..\/uploads\/2189.jpg"
+    },
+    {
+        "email": "numita2@hotmail.com",
+        "password": "$2y$10$lP3Wtp3BFjqm2.cZhJW0hOA.\/Vxwi0EV1blCqUbwywMPGDM3mp38O",
+        "nombre": "",
+        "apellido": "",
+        "cumpleanos": "",
+        "avatar": "..\/uploads\/2189.jpg"
+    },
+    {
+        "email": "numita2@hotmail.com",
+        "password": "$2y$10$It.d3nAb01YKR5zsJDYvgeJ0DBJDf2zxDszxImDYXy9l.N2zWipF6",
+        "nombre": "Numa",
+        "apellido": "Villador",
+        "cumpleanos": "10\/07\/2019",
+        "avatar": null
+    },
+    {
+        "email": "numita2@hotmail.com",
+        "password": "$2y$10$izsOznppGmzJULOjbuuaxe4Jo5FiOM2yh81D2r4C8Pk0AUhMseiUu",
+        "nombre": "",
+        "apellido": "",
+        "cumpleanos": "",
+        "avatar": null
+    },
+    {
+        "email": "numita2@hotmail.com",
+        "password": "$2y$10$7hSnnf\/MZkQKBRB17EnZZuEToKASgsOaul2FQ2cn0QppqHEMYhGza",
+        "nombre": "",
+        "apellido": "",
+        "cumpleanos": "",
+        "avatar": null
+    },
+    {
+        "email": "numita2@hotmail.com",
+        "password": "$2y$10$O6IuUNsVp4ZRQWxbHOdBZO8ZH.fh8Hi1EsCDZ95hadUbElw6fdqk2",
+        "nombre": "",
+        "apellido": "",
+        "cumpleanos": "",
+        "avatar": null
+    },
+    {
+        "email": "numita2@hotmail.com",
+        "password": "$2y$10$K5lR1Q4AkCm6.UyQkfGGROqAPTYjlTEM14TRpBT8xWokUnjlz27dy",
+        "nombre": "",
+        "apellido": "",
+        "cumpleanos": "",
+        "avatar": null
+    }
+]

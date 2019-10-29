@@ -54,9 +54,9 @@ $usuarioNombre= nombreUsuario($id);
 											Discos
 										</a>
 										<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-											<a class="dropdown-item" href="section.html">Rock Nacional</a>
-											<a class="dropdown-item" href="section.html">Funk</a>
-											<a class="dropdown-item" href="section.html">Clasicos del los 80</a>
+											<a class="dropdown-item" href="section.php">Rock Nacional</a>
+											<a class="dropdown-item" href="section.php">Funk</a>
+											<a class="dropdown-item" href="section.php">Clasicos del los 80</a>
 										</div>
 										</li>
 										<li class="nav-item dropdown">
@@ -64,8 +64,8 @@ $usuarioNombre= nombreUsuario($id);
 											Audio
 										</a>
 										<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-											<a class="dropdown-item" href="section.html">Auriculares</a>
-											<a class="dropdown-item" href="section.html">Parlantes</a>
+											<a class="dropdown-item" href="section.php">Auriculares</a>
+											<a class="dropdown-item" href="section.php">Parlantes</a>
 
 										</div>
 										</li>
@@ -74,16 +74,16 @@ $usuarioNombre= nombreUsuario($id);
 											Instrumentos
 										</a>
 										<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-											<a class="dropdown-item" href="section.html">Guitarras</a>
-											<a class="dropdown-item" href="section.html">Baterias</a>
-											<a class="dropdown-item" href="section.html">Pianos</a>
+											<a class="dropdown-item" href="section.php">Guitarras</a>
+											<a class="dropdown-item" href="section.php">Baterias</a>
+											<a class="dropdown-item" href="section.phpl">Pianos</a>
 										</div>
 										</li>
 									</ul>
 									<div class="menu-derehca navbar-nav mr-1">
 										<a href="<?= $formPerfil ?>" class="btn btn-outline-secondary btn-sm mr-2"> <?= $usuarioNombre ?></a>
 										<a href="Formularios/registro.php" class="btn btn-outline-secondary btn-sm mr-2"> registrate</a>
-										<a href="Formularios/login.html" class="btn btn-outline-secondary btn-sm mr-2"> log in</a>
+										<a href="Formularios/login.php" class="btn btn-outline-secondary btn-sm mr-2"> log in</a>
 										<a class="btn btn-outline-secondary btn-sm "href="Formularios/carrito.html"><img src="https://img.icons8.com/windows/26/000000/shopping-cart.png"></a>
 
 									</div>
@@ -110,21 +110,21 @@ $usuarioNombre= nombreUsuario($id);
 								</ol>
 								<div class="carousel-inner">
 								  <div class="carousel-item active">
-									<a href="section.html"><img src="imagenes/musico-g.jpg" class="d-block w-100 img-fluid" alt="... " ></a>
+									<a href="section.php"><img src="imagenes/musico-g.jpg" class="d-block w-100 img-fluid" alt="... " ></a>
 									<div class="carousel-caption d-none d-md-block">
 									  <h5>First slide label</h5>
 									  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
 									</div>
 								  </div>
 								  <div class="carousel-item">
-									<a href="section.html"><img src="imagenes/canciones-tocar-guitarra.jpg" class="d-block w-100 img-fluid" alt="..."></a>
+									<a href="section.php"><img src="imagenes/canciones-tocar-guitarra.jpg" class="d-block w-100 img-fluid" alt="..."></a>
 									<div class="carousel-caption d-none d-md-block">
 									  <h5>Second slide label</h5>
 									  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 									</div>
 								  </div>
 								  <div class="carousel-item">
-									<a href="section.html"><img src="imagenes/tocar-guitarra.jpg" class="d-block w-100 img-fluid" alt="..."></a>
+									<a href="section.php"><img src="imagenes/tocar-guitarra.jpg" class="d-block w-100 img-fluid" alt="..."></a>
 									<div class="carousel-caption d-none d-md-block">
 									  <h5>Third slide label</h5>
 									  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
@@ -149,16 +149,16 @@ $usuarioNombre= nombreUsuario($id);
 							<section>
 									<nav class="nav flex-column d-none d-sm-block" style="padding-top: 50px;">
 											<h5 class="ml-2">Discos</h5>
-		<a class="nav-link active" href="section.html">Rock Nacional</a>
-		<a class="nav-link" href="section.html">Funk</a>
-		<a class="nav-link" href="section.html">Clasicos de los 80</a>
+		<a class="nav-link active" href="section.php">Rock Nacional</a>
+		<a class="nav-link" href="section.php">Funk</a>
+		<a class="nav-link" href="section.php">Clasicos de los 80</a>
 		<h5>Audio</h5>
-		<a class="nav-link active" href="section.html">Auriculares</a>
-		<a class="nav-link active" href="section.html">Parlantes</a>
+		<a class="nav-link active" href="section.php">Auriculares</a>
+		<a class="nav-link active" href="section.php">Parlantes</a>
 		<h5>Instrumentos</h5>
-		<a class="nav-link active" href="section.html">Guitarras</a>
-		<a class="nav-link active" href="section.html">Baterias</a>
-		<a class="nav-link active" href="section.html">Pianos</a>
+		<a class="nav-link active" href="section.php">Guitarras</a>
+		<a class="nav-link active" href="section.php">Baterias</a>
+		<a class="nav-link active" href="section.php">Pianos</a>
 										</nav>
 							</section>
 						</div>
@@ -294,10 +294,10 @@ $usuarioNombre= nombreUsuario($id);
 					  <section class="container-fluid">
 					  <div class="row footer-l1">
 					      <div class="col-12 col-md-4">
-					        <a href="Formularios/faq.html"><h5>Preguntas frecuentes!</h5></a>
+					        <a href="Formularios/faq.php"><h5>Preguntas frecuentes!</h5></a>
 					      </div>
 					      <div class="col-12 col-md-4">
-					        <a href="home.html"><img src="imagenes\Logo.png" alt="">  </a>
+					        <a href="index.php"><img src="imagenes\Logo.png" alt="">  </a>
 					      </div>
 					      <div class="col-12 col-md-4">
 					        <a href="Formularios/contacto.html"><h5>Contactanos</h5></a>

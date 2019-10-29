@@ -310,5 +310,21 @@
         "apellido": "",
         "cumpleanos": "",
         "avatar": "..\/uploads\/2189.jpg"
+    },
+    {
+        "email": "contope@hotmail.com",
+        "password": "$2y$10$yPKe5PvPoydeSRxDgFn.U.LCXyyiYC3JAXKlY5x8U1.HCcKbmn\/Ni",
+        "nombre": "",
+        "apellido": "",
+        "cumpleanos": "",
+        "avatar": "..\/uploads\/2189.jpg"
+    },
+    {
+        "email": "numa@novusfill.com",
+        "password": "$2y$10$bP16RMl5PwNXGTUk8XlnEej.cLjLpXOeXWC5AKVUAlJmcy6ZYFIMW",
+        "nombre": "",
+        "apellido": "",
+        "cumpleanos": "",
+        "avatar": "..\/uploads\/2189.jpg"
     }
 ]

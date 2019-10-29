@@ -1,3 +1,30 @@
+<?php
+session_start();
+
+$usuarioNombre="perfil";
+
+function nombreUsuario($id1){
+	$jason=file_get_contents('DB/usuarios.json');
+	$usuarios=json_decode($jason,true);
+
+		return	$usuarios[$id1]['email'];
+
+}
+
+if (isset($_SESSION['id'])){
+$id=$_SESSION['id'];
+$formPerfil="Formularios/perfil-usuario.php";
+$usuarioNombre= nombreUsuario($id);
+
+
+
+}else {
+	$formPerfil="#";
+}
+
+ ?>
+
+
 					<!DOCTYPE html>
 					<html lang="en">
 					<head>
@@ -54,7 +81,7 @@
 										</li>
 									</ul>
 									<div class="menu-derehca navbar-nav mr-1">
-										<a href="Formularios/perfil-usuario.php" class="btn btn-outline-secondary btn-sm mr-2"> perfil</a>
+										<a href="<?= $formPerfil ?>" class="btn btn-outline-secondary btn-sm mr-2"> <?= $usuarioNombre ?></a>
 										<a href="Formularios/registro.php" class="btn btn-outline-secondary btn-sm mr-2"> registrate</a>
 										<a href="Formularios/login.html" class="btn btn-outline-secondary btn-sm mr-2"> log in</a>
 										<a class="btn btn-outline-secondary btn-sm "href="Formularios/carrito.html"><img src="https://img.icons8.com/windows/26/000000/shopping-cart.png"></a>

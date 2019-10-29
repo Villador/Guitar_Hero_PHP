@@ -2,28 +2,25 @@
 session_start();
 $disabled=true;
 
-$id = $_SESSION['id'];
+if (isset($_SESSION['id'])){
+  // var_dump( $_SESSION['id']);
+  $id = $_SESSION['id'];
+  $json=file_get_contents('../DB/usuarios.json');
 
-$json=file_get_contents('../DB/usuarios.json');
+  $usuarios=json_decode($json,true);
+  $usuario=$usuarios[$id];
 
-$usuarios=json_decode($json,true);
-$usuario=$usuarios[$id];
+}else {
 
 
-// $email="contope@hotmail.com"; // o tomara el valor del mail segun el usuairo
-// $nombre="";
-// $apellido="";
-// $avatar="";
-// $password="";
-$foto="../uploads/2189.jpg";
-var_dump($_POST);
+}
 
-function upload($name,$dir='uploads'){
+function upload($name,$dir='../uploads'){
     if(isset($_FILES[$name])){
       $ext=pathinfo($_FILES[$name]['name'], PATHINFO_EXTENSION);
-      $hash= $_FILES[$name]['temp_name'];   //       md5(time(). $_FILES[$name]['temp_name']);
+      $hash=  md5(time(). $_FILES[$name]['tmp_name']);
       $path="$dir/$hash.$ext";
-      move_uploaded_file($FILES[$name]['temp_name'],$path);
+      move_uploaded_file($_FILES[$name]['tmp_name'],$path);
 
       return $path ;
     }
@@ -33,7 +30,7 @@ function upload($name,$dir='uploads'){
 
 
  // var_dump($_POST);
-// echo pathinfo($_POST['fileToUpload'], PATHINFO_EXTENSION);
+
 if($_POST){
 
   if(isset($_POST['disabled'])){
@@ -43,16 +40,13 @@ if($_POST){
         $disabled=false;
       }else {
         $disabled=true;
-
       }
-
-
   }
 
 
 
 // var_dump($_POST);
-// ver si trae los datos de grabar entonces hace todo el juego de pasar nuevos datos a l jason
+
 
 //primero validar los datos
   if(isset($_POST['grabar'])){
@@ -91,14 +85,27 @@ if($_POST){
 
         $json=file_get_contents('../DB/usuarios.json');
         $users=json_decode($json,true);
+
+if (is_null(upload('avatar'))){
         $users[]=[
           'email'=>$_POST['email'],
           'password'=> password_hash($_POST['password'],PASSWORD_DEFAULT),
           'nombre'=>isset($_POST['nombre']) ? $_POST['nombre']:'',
           'apellido'=>isset($_POST['apellido']) ? $_POST['apellido']:'',
           'cumpleanos'=>isset($_POST['cumpleanos']) ? $_POST['cumpleanos']:'',
-          'avatar'=> upload('avatar'), //isset($_POST['avatar']) ? $_POST['avatar']:'',
         ];
+          }  else{
+            $users[]=[
+              'email'=>$_POST['email'],
+              'password'=> password_hash($_POST['password'],PASSWORD_DEFAULT),
+              'nombre'=>isset($_POST['nombre']) ? $_POST['nombre']:'',
+              'apellido'=>isset($_POST['apellido']) ? $_POST['apellido']:'',
+              'cumpleanos'=>isset($_POST['cumpleanos']) ? $_POST['cumpleanos']:'',
+              'avatar'=> upload('avatar'),
+              ];
+            }
+
+
 
 
         $json=json_encode($users,JSON_PRETTY_PRINT);
@@ -107,6 +114,8 @@ if($_POST){
         // var_dump($_POST);
           $_SESSION['id'] = count($users)-1;
 
+
+          header('Location: perfil-usuario.php');
         }
 
       }
@@ -148,14 +157,14 @@ if($_POST){
 
       <section id="content" class="page-content">
 
-    <form action="perfil-usuario.php" id="customer-form" class="js-customer-form" method="post">
+    <form action="perfil-usuario.php" id="customer-form" class="js-customer-form" method="post" enctype="multipart/form-data">
       <section>
 
         <input type="hidden" name="id_customer" value="14">
 
       <div class="form-group row ">
 
-        <form action="?action=perfil-usuario" method="get" enctype="multipart/form-data">
+        <!-- <form action="?action=perfil-usuario" method="post" enctype="multipart/form-data"> -->
             <label class="col-md-3 form-control-label">
 
             </label>
@@ -175,7 +184,7 @@ if($_POST){
                   <!-- <input type="submit" value="Upload Image" name="submit"> -->
 
             </div>
-        </form>
+        <!-- </form> -->
 
         <!-- <div class="col-md-3 form-control-comment">
 

@@ -142,5 +142,173 @@
         "apellido": "",
         "cumpleanos": "",
         "avatar": null
+    },
+    {
+        "email": "ana@fff.com",
+        "password": "$2y$10$dDAAV05CWFC9L64kTgvEX.8tmiRC3rAGnLL3zJja5AKZcs.a76OGK",
+        "nombre": "",
+        "apellido": "",
+        "cumpleanos": "",
+        "avatar": "..\/uploads\/2189.jpg"
+    },
+    {
+        "email": "contope@hotmail.com",
+        "password": "$2y$10$roPfGYmAJsFgWUzsQ0T1HOoZ8hrhzdz6Hityz3hxLYVXRt\/0DguN.",
+        "nombre": "",
+        "apellido": "",
+        "cumpleanos": "",
+        "avatar": "..\/uploads\/2189.jpg"
+    },
+    {
+        "email": "contope@hotmail.com",
+        "password": "$2y$10$lmzP5ORLPGMHjKadkX4BGun.dIWtpKDCgf7XM9pqaktVk5r.BVTay",
+        "nombre": "",
+        "apellido": "",
+        "cumpleanos": "",
+        "avatar": "..\/uploads\/2189.jpg"
+    },
+    {
+        "email": "contope@hotmail.com",
+        "password": "$2y$10$wx.jBcUlGYmUFaSbzerkHezDugRGWAo1So8qaZtN3fQsYYctfSdWy",
+        "nombre": "",
+        "apellido": "",
+        "cumpleanos": "",
+        "avatar": null
+    },
+    {
+        "email": "contope@hotmail.com",
+        "password": "$2y$10$vKg\/\/Y0yPv43zkkvX3gv4uZkKATRyLUZR5aXnVrhc4oEPjDf5sUia",
+        "nombre": "",
+        "apellido": "",
+        "cumpleanos": "",
+        "avatar": null
+    },
+    {
+        "email": "contope@hotmail.com",
+        "password": "$2y$10$yMLSuw0jUBYVU.zEOn6wtOxt.7qu0htnE80bFeljbBYMaQNdds5IC",
+        "nombre": "Numa",
+        "apellido": "",
+        "cumpleanos": "",
+        "avatar": null
+    },
+    {
+        "email": "contope@hotmail.com",
+        "password": "$2y$10$M82g8PlDTz3xyncAHQI03Om\/xZns5yoZe.DR6KO1faQlg6UVsAsta",
+        "nombre": "Numa",
+        "apellido": "lopezsssssssssssssss",
+        "cumpleanos": "",
+        "avatar": "..\/uploads\/C:\\xampp\\tmp\\php60A7.tmp.jpg"
+    },
+    {
+        "email": "contope@hotmail.com",
+        "password": "$2y$10$Fhy64OznZ.zfJXZX16pvzOfbPUbTMTAcZ3H9tWO0IvIa5iDft530y",
+        "nombre": "Numa",
+        "apellido": "lopezsssssssssssssss",
+        "cumpleanos": "",
+        "avatar": "..\/uploads\/C:\\xampp\\tmp\\phpF18.tmp.jpg"
+    },
+    {
+        "email": "contope@hotmail.com",
+        "password": "$2y$10$H7Rll5S7Ju1VjEzJI\/hCT.40AjWXUc4H3setslhX96zL5lP8.l.De",
+        "nombre": "Numa",
+        "apellido": "lopezsssssssssssssss",
+        "cumpleanos": "",
+        "avatar": "..\/uploads\/C:\\xampp\\tmp\\php7713.tmp.jpg"
+    },
+    {
+        "email": "contope@hotmail.com",
+        "password": "$2y$10$NmyxtGfCcQ80IZGFQsls1.5.hI1Z8\/W32v4c7GsuXVDqBE129AL.a",
+        "nombre": "Numa",
+        "apellido": "lopezsssssssssssssss",
+        "cumpleanos": "",
+        "avatar": "..\/uploads\/C:\\xampp\\tmp\\phpC8EA.tmp.jpg"
+    },
+    {
+        "email": "contope@hotmail.com",
+        "password": "$2y$10$WXUrGGe\/N6B0KL1cQiXevukWNC7qGK5sINUZJLaL.2TrA7mn0WcgS",
+        "nombre": "Numa",
+        "apellido": "lopezsssssssssssssss",
+        "cumpleanos": "",
+        "avatar": "..\/uploads\/1fdac1e67ed68723255d78d7545415ce.jpg"
+    },
+    {
+        "email": "contope@hotmail.com",
+        "password": "$2y$10$5c2lw72Mb.64vSdd8PReROWXFDLOVWBSKmioIs5gbGkLBUoVcQk6W",
+        "nombre": "Numa",
+        "apellido": "lopezsssssssssssssss",
+        "cumpleanos": "",
+        "avatar": "..\/uploads\/a64a6183bd8272e751284f99e2be7276.jpg"
+    },
+    {
+        "email": "contope@hotmail.com",
+        "password": "$2y$10$tP7uJtHtgz575uhuNmLFvOfEU\/7r4PHKfJ1B70ix9ItOK0sTWvQI.",
+        "nombre": "Numa",
+        "apellido": "lopezsssssssssssssss",
+        "cumpleanos": "",
+        "avatar": "..\/uploads\/83e778aa78d4feddaeb6b2386dddb03b."
+    },
+    {
+        "email": "mariano@hotmail.com",
+        "password": "$2y$10$lm39f0DiuxC3.VHu.96dV.IkN0HNuFZOcwCCVkEQ5iMsNyYO7E6sG",
+        "nombre": "",
+        "apellido": "",
+        "cumpleanos": "",
+        "avatar": "..\/uploads\/2189.jpg"
+    },
+    {
+        "email": "mariano@hotmail.com",
+        "password": "$2y$10$3sNqfufzk.eTEHsZLCZt7eLC0Ho3KFsNFrR7fg9RogyXwEyFMI5RK",
+        "nombre": "",
+        "apellido": "",
+        "cumpleanos": "",
+        "avatar": "..\/uploads\/c091a024d2257bf4be31e8eecf99878e.jpg"
+    },
+    {
+        "email": "mariano@hotmail.com",
+        "password": "$2y$10$THjiRIgRw3LwEsGqIfnHjOdPsgn6\/ccyq6kuBiigu9rEec5wQwf1u",
+        "nombre": "Numa",
+        "apellido": "cucucuaaaaaaaaaaaaaaaaa",
+        "cumpleanos": "15\/09\/2022",
+        "avatar": "..\/uploads\/092d66ac898228e9badcc5f1c342c564."
+    },
+    {
+        "email": "sdasd@mmm.com",
+        "password": "$2y$10$Grt9uz7I1T6RJn\/6wkvzC.JI.25DoiHU.dt\/XZ41xOKLJOZuxmYi6",
+        "nombre": "",
+        "apellido": "",
+        "cumpleanos": "",
+        "avatar": "..\/uploads\/2189.jpg"
+    },
+    {
+        "email": "sdasd@mmm.com",
+        "password": "$2y$10$YfzOwRnrxBu2QUtTTdkwAOwYXGkxRi86iF5pkflojWiuhQr88LmLK",
+        "nombre": "pedro",
+        "apellido": "javier",
+        "cumpleanos": "15\/09\/2016",
+        "avatar": "..\/uploads\/15e8072731e376df81dee9050c4bab4f.jpg"
+    },
+    {
+        "email": "nva@novusfill.com",
+        "password": "$2y$10$YIEHVCM\/8kajpOW2JEZEdelTJN\/pydqgmjGP40XXdhM6..Q6fKH56",
+        "nombre": "",
+        "apellido": "",
+        "cumpleanos": "",
+        "avatar": "..\/uploads\/2189.jpg"
+    },
+    {
+        "email": "nva@novusfill.com",
+        "password": "$2y$10$T1FTBJp4vQG8eybCMGHVvOdapYKbKALPDo\/e5Rr.Ukzt7BvaljwiC",
+        "nombre": "Numa",
+        "apellido": "Villador",
+        "cumpleanos": "21\/09\/1972",
+        "avatar": "..\/uploads\/4aa80560df34bcaba7cdfe65c2e2c75d.png"
+    },
+    {
+        "email": "numa@novusfill.com",
+        "password": "$2y$10$L9HUh\/8Bv6fyxuB8t3zZlOUUTVQfmpgFw6IJpwfAc\/7G5WA.OU5c.",
+        "nombre": "",
+        "apellido": "",
+        "cumpleanos": "",
+        "avatar": "..\/uploads\/2189.jpg"
     }
 ]

@@ -10,6 +10,19 @@ if (isset($_SESSION['id'])){
   $usuarios=json_decode($json,true);
   $usuario=$usuarios[$id];
 
+
+  if(isset($_GET['log'])){
+
+    if($_GET['log']==0){
+
+      session_unset();
+      session_destroy();
+
+      header('location:../index.php');
+
+    }
+  }
+
 }else {
 
 
@@ -30,6 +43,7 @@ function upload($name,$dir='../uploads'){
 
 
  // var_dump($_POST);
+
 
 if($_POST){
 
@@ -166,7 +180,7 @@ if (is_null(upload('avatar'))){
 
         <!-- <form action="?action=perfil-usuario" method="post" enctype="multipart/form-data"> -->
             <label class="col-md-3 form-control-label">
-
+              <a href="perfil-usuario.php?log=0">Log out</a>
             </label>
 
             <div class="col-md-3 form-control-valign">

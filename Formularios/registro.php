@@ -8,7 +8,7 @@ $password = "";
 
 if($_POST){
 
-var_dump($_POST);
+
 //validar campos
 if (! filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
   $errors['email']="Debe ingresar una direccion valida!";
@@ -19,7 +19,7 @@ if (! filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
 
   if($_POST['password']!=$_POST['password_confirmation']){
 
-    $errors['password_confirmation']='el password no coincide';
+    $errors['password']='el password no coincide';
   }else{
 
     if(strlen($_POST['password'])<8){
@@ -28,7 +28,7 @@ if (! filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
     }else {
 
         if (ctype_digit($_POST['password']{0})){
-          $errors['password_confirmation']='el password debe comenzar con un digito alfabetico';
+          $errors['password']='el password debe comenzar con un digito alfabetico';
         }
 
     }

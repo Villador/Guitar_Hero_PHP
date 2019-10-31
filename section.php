@@ -44,7 +44,7 @@ $usuarioNombre= nombreUsuario($id);
   <div class="container-fluid">
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light  ">
-        <a class="navbar-brand" href="home.html"><img  width= "110px"src="imagenes/logo.png" alt=""></a>
+        <a class="navbar-brand" href="index.php"><img  width= "110px"src="imagenes/logo.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -84,7 +84,7 @@ $usuarioNombre= nombreUsuario($id);
           <div class="menu-derehca navbar-nav mr-1">
             <a href="<?= $formPerfil ?>" class="btn btn-outline-secondary btn-sm mr-2"> <?= $usuarioNombre ?></a>
             <a href="Formularios/registro.php" class="btn btn-outline-secondary btn-sm mr-2"> registrate</a>
-            <a href="Formularios/login.html" class="btn btn-outline-secondary btn-sm mr-2"> log in</a>
+            <a href="Formularios/login.php" class="btn btn-outline-secondary btn-sm mr-2"> log in</a>
             <a class="btn btn-outline-secondary btn-sm "href="Formularios/carrito.html"><img src="https://img.icons8.com/windows/26/000000/shopping-cart.png"></a>
 
           </div>
@@ -147,7 +147,7 @@ $usuarioNombre= nombreUsuario($id);
 <div class="row col-12">
   <nav class="nav flex-column d-none d-sm-block col-lg-2 pr-0 mt-5 bg-transparent">
     <h5 class="ml-2">Discos</h5>
-    <a class="nav-link active" href="section.html">Rock Nacional</a>
+    <a class="nav-link active" href="section.php">Rock Nacional</a>
     <a class="nav-link" href="section.php">Funk</a>
     <a class="nav-link" href="section.php">Clasicos de los 80</a>
     <h5>Audio</h5>
@@ -267,13 +267,13 @@ $usuarioNombre= nombreUsuario($id);
     <section class="container-fluid">
     <div class="row footer-l1">
         <div class="col-12 col-md-4">
-          <a href="Formularios/faq.html"><h5>Preguntas frecuentes!</h5></a>
+          <a href="Formularios/faq.php"><h5>Preguntas frecuentes!</h5></a>
         </div>
         <div class="col-12 col-md-4">
           <a href="index.php"><img src="imagenes\Logo.png" alt="">  </a>
         </div>
         <div class="col-12 col-md-4">
-          <a href="Formularios/contacto.html"><h5>Contactanos</h5></a>
+          <a href="Formularios/contacto.php"><h5>Contactanos</h5></a>
         </div>
 
     </div>

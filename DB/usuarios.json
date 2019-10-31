@@ -422,5 +422,29 @@
         "apellido": "nemerovsky",
         "cumpleanos": "15\/07\/2019",
         "avatar": "..\/uploads\/7e6f890a04a77acf901bd4733cd6fbd8.jpg"
+    },
+    {
+        "email": "contope@hotmail.com",
+        "password": "$2y$10$UhUvECBokjYFqGgDDZP\/zuPJ046WK2roQYbFN.Jty2XZ.48xLXbFa",
+        "nombre": "Gustavo",
+        "apellido": "Auyero",
+        "cumpleanos": "15\/09\/1980",
+        "avatar": "..\/uploads\/c8b4e728b275b7f6ab7e9c91e3625376.jpg"
+    },
+    {
+        "email": "francesco@hotmail.com",
+        "password": "$2y$10$DhhUUOT2TO7FL1.83bDLueRD6Yz98AnasFoXh\/pHYFq7Ju3vTQxba",
+        "nombre": "",
+        "apellido": "",
+        "cumpleanos": "",
+        "avatar": "..\/uploads\/2189.jpg"
+    },
+    {
+        "email": "francesco@hotmail.com",
+        "password": "$2y$10$L21X3BRfz2LiCK817tK.fONbU9BfXbmocOAszxh4yjhaQxZbL8kd.",
+        "nombre": "Francesco",
+        "apellido": "Schultze",
+        "cumpleanos": "15\/09\/2021",
+        "avatar": "..\/uploads\/26fccd82e2f1e51982ba1dc04ebbe9ce.jpg"
     }
 ]

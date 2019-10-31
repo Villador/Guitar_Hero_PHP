@@ -13,11 +13,11 @@ form {
 }
 
 input[type=text], select, textarea {
-  width: 100%; 
-  padding: 12px;  
-  box-sizing: border-box; 
-  margin-top: 6px; 
-  margin-bottom: 16px; 
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
 }
 
 input[type=submit] {
@@ -37,5 +37,6 @@ input[type=submit]:hover {
 .container {
   padding: 20px;
 }
-
-
+.volverHome a {
+background-color: red;
+}

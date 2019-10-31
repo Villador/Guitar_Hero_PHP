@@ -15,7 +15,7 @@ if (isset($_SESSION['id'])){
 $id=$_SESSION['id'];
 $formPerfil="Formularios/perfil-usuario.php";
 $usuarioNombre= nombreUsuario($id);
-
+echo "hay session ID";
 
 
 }else {
@@ -173,7 +173,7 @@ $usuarioNombre= nombreUsuario($id);
 								<div class="row">
 								<article class="col-12 col-md-6 col-xl-3" style="padding-left:10px;">
 										<div class="card text-center" style="width: 15rem;">
-											<a href="product-page1.html">
+											<a href="product-page1.php">
 												<img src="imagenes/guitarra.jpg" class="card-img-top" alt="...">
 												</a>
 												<div class="card-body">
@@ -186,7 +186,7 @@ $usuarioNombre= nombreUsuario($id);
 								</article>
 								<article class="col-12 col-md-6 col-xl-3">
 										<div class="card text-center" style="width: 15rem;">
-											<a href="product-page1.html">
+											<a href="product-page1.php">
 												<img src="imagenes/guitarra.jpg" class="card-img-top" alt="...">
 												</a>
 												<div class="card-body">
@@ -199,7 +199,7 @@ $usuarioNombre= nombreUsuario($id);
 								</article>
 								<article class="col-12 col-md-6 col-xl-3">
 										<div class="card text-center" style="width: 15rem;">
-											<a href="product-page1.html">
+											<a href="product-page1.php">
 												<img src="imagenes/guitarra.jpg" class="card-img-top" alt="...">
 												</a>
 												<div class="card-body">
@@ -212,7 +212,7 @@ $usuarioNombre= nombreUsuario($id);
 								</article>
 								<article class="col-12 col-md-6 col-xl-3">
 										<div class="card text-center" style="width: 15rem;">
-											<a href="product-page1.html">
+											<a href="product-page1.php">
 												<img src="imagenes/guitarra.jpg" class="card-img-top" alt="...">
 												</a>
 												<div class="card-body">
@@ -233,7 +233,7 @@ $usuarioNombre= nombreUsuario($id);
 								<div class="row">
 								<article class="col-12 col-md-6 col-xl-3">
 										<div class="card text-center" style="width: 15rem;">
-											<a href="product-page1.html">
+											<a href="product-page1.php">
 												<img src="imagenes/guitarra.jpg" class="card-img-top" alt="...">
 												</a>
 												<div class="card-body">
@@ -246,7 +246,7 @@ $usuarioNombre= nombreUsuario($id);
 								</article>
 								<article class="col-12 col-md-6 col-xl-3">
 										<div class="card text-center" style="width: 15rem;">
-											<a href="product-page1.html">
+											<a href="product-page1.php">
 												<img src="imagenes/guitarra.jpg" class="card-img-top" alt="...">
 												</a>
 												<div class="card-body">
@@ -259,7 +259,7 @@ $usuarioNombre= nombreUsuario($id);
 								</article>
 								<article class="col-12 col-md-6 col-xl-3">
 										<div class="card text-center" style="width: 15rem;">
-											<a href="product-page1.html">
+											<a href="product-page1.php">
 												<img src="imagenes/guitarra.jpg" class="card-img-top" alt="...">
 												</a>
 												<div class="card-body">
@@ -272,7 +272,7 @@ $usuarioNombre= nombreUsuario($id);
 								</article>
 								<article class="col-12 col-md-6 col-xl-3">
 										<div class="card text-center" style="width: 15rem;">
-											<a href="product-page1.html">
+											<a href="product-page1.php">
 												<img src="imagenes/guitarra.jpg" class="card-img-top" alt="...">
 												</a>
 												<div class="card-body">
@@ -300,7 +300,7 @@ $usuarioNombre= nombreUsuario($id);
 					        <a href="index.php"><img src="imagenes\Logo.png" alt="">  </a>
 					      </div>
 					      <div class="col-12 col-md-4">
-					        <a href="Formularios/contacto.html"><h5>Contactanos</h5></a>
+					        <a href="Formularios/contacto.php"><h5>Contactanos</h5></a>
 					      </div>
 
 					  </div>

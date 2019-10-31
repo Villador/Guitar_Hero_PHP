@@ -1,0 +1,72 @@
+    <?php
+
+    session_start();
+
+    function verificarUsuario($usuarios, $email, $password){
+        foreach ($usuarios as $key => $usuario){
+            if ($usuario["email"] === $_POST["email"] && password_verify($_POST["password"], $usuario["password"])){
+              var_dump($key);
+                return $key; //$usuario;
+            }
+    }
+    return false;
+}
+
+     if ($_POST){
+
+        $json = file_get_contents('../DB/usuarios.json');
+
+        $usuarios = json_decode($json, true);
+
+        $usuario = verificarUsuario($usuarios, $_POST["email"], $_POST["password"]);
+
+        if(!$usuario){
+            $error = "Los datos son incorrectos";
+        }
+        else{
+            $_SESSION["id"] = $usuario;
+            header("Location:../index.php");
+        }
+    }
+    ?>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Log in</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="login.css">
+    </head>
+
+        <body>
+        <div id="formulario">
+            <form action="?action=login" method="post">
+                <h2 style="text-align: center"> Log in!</h2>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email" name="email">
+                <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" name="password">
+                <?php  if (isset($error)):  ?>
+                    <p><?= $error ?></p>
+                <?php endif; ?>
+                <input type="submit" value="Ingresar!">
+                <a href="#" id="forgot_pswd">Olvidaste tu contraseña?</a>
+                <hr>
+
+                <input type="submit" value="Si no tenes una cuenta, ingresá acá!">
+                <a href="index.php">Volver a Home</a>
+                </form>
+
+
+
+
+                <br>
+
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    </body>

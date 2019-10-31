@@ -6,16 +6,37 @@ $email = "";
 $password = "";
 
 
+function verificarUsuario($email){
+  $jason=file_get_contents("../DB/usuarios.json");
+  $usuarios=json_decode($jason,true);
+  foreach ($usuarios as $usuario) {
+    if($usuario['email'] == $email){
+      return true;
+    }
+  }
+return false;
+}
+
+
+
+
 if($_POST){
 
 
 //validar campos
 if (! filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
   $errors['email']="Debe ingresar una direccion valida!";
+}else{
+  if(verificarUsuario($_POST['email'])){
+    $errors['email']="El usuario ya existe";
+  }else{
+    $email= $_POST['email'];
+  }
 }
 
 //validar PASSWORD
-    $email= $_POST['email'];
+
+
 
   if($_POST['password']!=$_POST['password_confirmation']){
 

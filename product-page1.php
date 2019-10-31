@@ -38,7 +38,7 @@ $usuarioNombre= nombreUsuario($id);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>MANUJO-Producto</title>
+  <title>Producto</title>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/product-page-style.css">
@@ -54,7 +54,7 @@ $usuarioNombre= nombreUsuario($id);
 <div class="container-fluid">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light  ">
-        <a class="navbar-brand" href="home.html"><img  width= "110px"src="imagenes/logo.png" alt=""></a>
+        <a class="navbar-brand" href="index.php"><img  width= "110px"src="imagenes/logo.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -94,7 +94,7 @@ $usuarioNombre= nombreUsuario($id);
         <div class="menu-derehca navbar-nav mr-1">
           <a href="<?= $formPerfil ?>"  class="btn btn-outline-secondary btn-sm mr-2"> <?= $usuarioNombre ?></a>
           <a href="Formularios/registro.php" class="btn btn-outline-secondary btn-sm mr-2"> registrate</a>
-          <a href="Formularios/login.html" class="btn btn-outline-secondary btn-sm mr-2"> log in</a>
+          <a href="Formularios/login.php" class="btn btn-outline-secondary btn-sm mr-2"> log in</a>
           <a class="btn btn-outline-secondary btn-sm" href="Formularios/carrito.html"><img src="https://img.icons8.com/windows/26/000000/shopping-cart.png"></a>
 
         </div>
@@ -361,13 +361,13 @@ $usuarioNombre= nombreUsuario($id);
   <section class="container-fluid">
   <div class="row footer-l1">
       <div class="col-12 col-md-4">
-        <a href="Formularios/faq.html"><h5>Preguntas frecuentes</h5></a>
+        <a href="Formularios/faq.php"><h5>Preguntas frecuentes</h5></a>
       </div>
       <div class="col-12 col-md-4">
-        <a href="home.html"><img src="imagenes\Logo.png" alt="">  </a>
+        <a href="index.php"><img src="imagenes\Logo.png" alt="">  </a>
       </div>
       <div class="col-12 col-md-4">
-        <a href="Formularios/contacto.html"><h5>Contactanos</h5></a>
+        <a href="Formularios/contacto.php"><h5>Contactanos</h5></a>
       </div>
 
   </div>

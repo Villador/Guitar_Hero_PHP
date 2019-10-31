@@ -87,7 +87,7 @@ if(isset($_POST['remember'])){
     setcookie("remember",count($users)-1,time()+3600);
   }
 }
-
+// var_dump($_POST['remember']);
 $_SESSION['id'] = count($users)-1;
 header("location: perfil-usuario.php");
 

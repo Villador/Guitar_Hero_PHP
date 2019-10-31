@@ -16,7 +16,7 @@ if (isset($_SESSION['id'])){
 $id=$_SESSION['id'];
 $formPerfil="perfil-usuario.php";
 $usuarioNombre= nombreUsuario($id);
-echo "hay session ID";
+
 
 
 }else {

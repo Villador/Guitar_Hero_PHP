@@ -111,11 +111,17 @@ header("location: perfil-usuario.php");
     <div class="row">
 
 
+  
 
-    <label for="email"><b>Email     </b><span style="color: red">    <?=$errors['email']?? ''?></span></label>
+
+
+    <label for="email"><b>Email     </b><span style="color: red">    <?=$errors['email']?></span></label>
     <input type="text" placeholder="ejemplo: nombre@dominio.com" name="email" value="<?=$email?>" required>
 
-    <label for="psw"><b>Password</b><span style="color: red">    <?=$errors['password']?? ''?></span></label>
+
+
+
+    <label for="psw"><b>Password</b><span style="color: red">    <?=$errors['password']?></span></label>
     <input type="password" placeholder="Ingresá tu password" name="password" value="" required>
 
     <label for="psw-repeat"><b>Repetir Password</b><span style="color: red">    <?=$errors['email']?? ''?></span></label>
@@ -126,7 +132,7 @@ header("location: perfil-usuario.php");
   </div>
   <!-- //  <div class="row errores">
 
-  //    <p class="errores" style="color: red"><?=$errors['password_confirmation']?? ''?></p>
+
 
 //    </div> -->
 

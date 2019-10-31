@@ -14,3 +14,6 @@ body {
 button {
   color: white;
 }
+.volverHome p a{
+  margin-left: 20px;
+}

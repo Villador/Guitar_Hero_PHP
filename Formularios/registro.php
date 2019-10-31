@@ -133,7 +133,7 @@ header("location: perfil-usuario.php");
 
     <hr>
 
-    <p>Al crear tu cuenta, aceptas estar de acuerdo con nuestros <a href="#">Términos y condiciones</a>.</p>
+    <p>Al crear tu cuenta, aceptas estar de acuerdo con nuestros <a href="terminos.php">Términos y condiciones</a>.</p>
     <!-- <button type="submit" class="registerbtn">Registrate!</button> -->
     <button class="registerbtn">Registrate!</button>
 

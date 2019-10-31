@@ -39,7 +39,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Log in</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="login.css">
+        <link rel="stylesheet" href="login1.css">
     </head>
 
         <body>
@@ -56,10 +56,12 @@
                 <hr>
 
                 <input type="submit" value="Si no tenes una cuenta, ingresá acá!">
-                <a href="../index.php">Volver a Home</a>
+
+                <div class="volverHome" >
+                  <p><a clase "volverHome" href="../index.php">Volver a Home!</a></p>
+                </div>
+
                 </form>
-
-
 
 
                 <br>

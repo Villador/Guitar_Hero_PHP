@@ -158,13 +158,13 @@ echo "hay session ID";
   <section class="container-fluid">
   <div class="row footer-l1">
       <div class="col-12 col-md-4">
-        <a href="Formularios/faq.php"><h5>Preguntas frecuentes!</h5></a>
+        <a href="../Formularios/faq.php"><h5>Preguntas frecuentes!</h5></a>
       </div>
       <div class="col-12 col-md-4">
-        <a href="index.php"><img src="../imagenes/Logo.png" alt="">  </a>
+        <a href="../index.php"><img src="../imagenes/Logo.png" alt="">  </a>
       </div>
       <div class="col-12 col-md-4">
-        <a href="Formularios/contacto.php"><h5>Contactanos</h5></a>
+        <a href="../Formularios/contacto.php"><h5>Contactanos</h5></a>
       </div>
 
   </div>

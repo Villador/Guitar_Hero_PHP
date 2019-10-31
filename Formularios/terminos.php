@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FAQ</title>
+    <title>Terminos y Condiciones</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="faq.css">
+    <link rel="stylesheet" href="terminos.css">
 </head>
 <body>
 
-<h1>Preguntas frecuentes!</h1>
+<h1>Terminos y Condiciones</h1>
   <div class="accordion" id="accordionExample">
     <div class="card bg-transparent">
       <div class="card-header" id="headingOne">
         <h2 class="mb-0">
           <button class="btn btn-outline-light" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Pregunta uno?
+            Punto 1?
           </button>
         </h2>
       </div>
@@ -31,7 +31,7 @@
       <div class="card-header" id="headingTwo">
         <h2 class="mb-0">
           <button class="btn btn-outline-light collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            Pregunta 2?
+            Punto 2?
           </button>
         </h2>
       </div>
@@ -45,7 +45,7 @@
       <div class="card-header" id="headingThree">
         <h2 class="mb-0">
           <button class="btn btn-outline-light collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            Pregunta tres?
+            Punto 3?
           </button>
         </h2>
       </div>
@@ -54,6 +54,11 @@
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </div>
       </div>
+      <div class="volverHome" >
+        <p><a href="../index.php">Volver al Home!</a></p>
+      </div>
+
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

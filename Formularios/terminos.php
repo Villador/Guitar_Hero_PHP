@@ -55,7 +55,7 @@
         </div>
       </div>
       <div class="volverHome" >
-        <p><a href="../index.php">Volver al Home!</a></p>
+        <p><a href="registro.php">Volver al Home!</a></p>
       </div>
 
 

@@ -1,6 +1,7 @@
 <?php
 session_start();
 $disabled=true;
+// var_dump($_COOKIE['remember']);
 
 if (isset($_SESSION['id'])){
   // var_dump( $_SESSION['id']);
@@ -104,7 +105,7 @@ if($_POST){
             foreach ($users as $key2 => $value) {
               if($users[$key2]['email'] === $_POST['email']){
               $id1  =$key2;
-              
+
               }
             }
 

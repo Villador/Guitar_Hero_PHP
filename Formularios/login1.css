@@ -58,3 +58,37 @@ input[type=submit] {
         width:300px;
     }
 }
+.check1{
+
+  width: 5%;
+  padding: 0px;
+  margin-top: 5px;
+  display: flex;
+  border: none;
+
+
+}
+
+.check2{
+  color: rgb(159, 184, 209);
+
+  padding: 0px;
+  margin-bottom: 13px;
+  display: flex;
+  border: none;
+
+
+}
+
+
+#ch1{
+  background-color: red;
+
+  margin-left: 0px;
+  padding-left: 0px;
+}
+.check10{
+  display: flex;
+  box-sizing: border-box;
+    /* background: red; */
+}

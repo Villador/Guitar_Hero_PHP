@@ -25,8 +25,19 @@
             $error = "Los datos son incorrectos";
         }
         else{
+
+
+
+            if($_POST['remember']=="on"){
+
+              setcookie("remember",count($usuarios)-1,time()+3600);
+// var_dump($_COOKIE['remember']);
+            }
+
+
             $_SESSION["id"] = $usuario;
             header("Location:../index.php");
+
         }
     }
     ?>
@@ -51,6 +62,12 @@
                 <?php  if (isset($error)):  ?>
                     <p><?= $error ?></p>
                 <?php endif; ?>
+                <div class="check10">
+
+                  <input class="check1" type="checkbox" id="ch1" aria-label="Checkbox for following text input" name="remember">
+                  <label class="check2">Recordar usuario</label>
+                </div>
+
                 <input type="submit" value="Ingresar!">
                 <a href="#" id="forgot_pswd">Olvidaste tu contraseña?</a>
                 <hr>

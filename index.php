@@ -2,21 +2,27 @@
 session_start();
 
 $usuarioNombre="perfil";
+// var_dump($_COOKIE['remember']);
 
 function nombreUsuario($id1){
 	$jason=file_get_contents('DB/usuarios.json');
 	$usuarios=json_decode($jason,true);
-
+// var_dump($usuarios[$id1]);
 		return	$usuarios[$id1]['email'];
 
 }
 
+
+if (isset($_COOKIE['remember'])){
+	$id=$_SESSION['id'];
+	$formPerfil="Formularios/perfil-usuario.php";
+	$usuarioNombre= nombreUsuario($id);
+}
+
 if (isset($_SESSION['id'])){
-$id=$_SESSION['id'];
-$formPerfil="Formularios/perfil-usuario.php";
-$usuarioNombre= nombreUsuario($id);
-
-
+	$id=$_SESSION['id'];
+	$formPerfil="Formularios/perfil-usuario.php";
+	$usuarioNombre= nombreUsuario($id);
 
 }else {
 	$formPerfil="#";

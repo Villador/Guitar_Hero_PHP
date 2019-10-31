@@ -29,6 +29,7 @@ if (isset($_SESSION['id'])){
 }
 
 function upload($name,$dir='../uploads'){
+  var_dump($_FILES[$name]);
     if(isset($_FILES[$name])){
       $ext=pathinfo($_FILES[$name]['name'], PATHINFO_EXTENSION);
       $hash=  md5(time(). $_FILES[$name]['tmp_name']);
@@ -100,26 +101,45 @@ if($_POST){
         $json=file_get_contents('../DB/usuarios.json');
         $users=json_decode($json,true);
 
-if (is_null(upload('avatar'))){
-        $users[]=[
-          'email'=>$_POST['email'],
-          'password'=> password_hash($_POST['password'],PASSWORD_DEFAULT),
-          'nombre'=>isset($_POST['nombre']) ? $_POST['nombre']:'',
-          'apellido'=>isset($_POST['apellido']) ? $_POST['apellido']:'',
-          'cumpleanos'=>isset($_POST['cumpleanos']) ? $_POST['cumpleanos']:'',
-        ];
-          }  else{
-            $users[]=[
-              'email'=>$_POST['email'],
-              'password'=> password_hash($_POST['password'],PASSWORD_DEFAULT),
-              'nombre'=>isset($_POST['nombre']) ? $_POST['nombre']:'',
-              'apellido'=>isset($_POST['apellido']) ? $_POST['apellido']:'',
-              'cumpleanos'=>isset($_POST['cumpleanos']) ? $_POST['cumpleanos']:'',
-              'avatar'=> upload('avatar'),
-              ];
+            foreach ($users as $key2 => $value) {
+              if($users[$key2]['email'] === $_POST['email']){
+              $id1  =$key2;
+              
+              }
             }
 
 
+            if (is_null(upload('avatar'))){
+
+              //
+              // if (password_verify($users[$id1], $users[$id1]['avatar'])) {
+              //     echo '¡La contraseña es válida!';
+              // } else {
+              //     echo 'La contraseña no es válida.';
+              // }
+
+
+                $users[$id1]=[
+                  'email'=>$_POST['email'],
+                  'password'=> password_hash($_POST['password'],PASSWORD_DEFAULT),
+                  'nombre'=>isset($_POST['nombre']) ? $_POST['nombre']:'',
+                  'apellido'=>isset($_POST['apellido']) ? $_POST['apellido']:'',
+                  'cumpleanos'=>isset($_POST['cumpleanos']) ? $_POST['cumpleanos']:'',
+
+                ];
+
+
+
+            }  else{
+              $users[$id1]=[
+                'email'=>$_POST['email'],
+                'password'=> password_hash($_POST['password'],PASSWORD_DEFAULT),
+                'nombre'=>isset($_POST['nombre']) ? $_POST['nombre']:'',
+                'apellido'=>isset($_POST['apellido']) ? $_POST['apellido']:'',
+                'cumpleanos'=>isset($_POST['cumpleanos']) ? $_POST['cumpleanos']:'',
+                'avatar'=> upload('avatar'),
+              ];
+            }
 
 
         $json=json_encode($users,JSON_PRETTY_PRINT);

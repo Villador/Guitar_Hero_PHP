@@ -2,14 +2,15 @@
 
     session_start();
 
-    function verificarUsuario($usuarios, $email, $password){
-        foreach ($usuarios as $key => $usuario){
-            if ($usuario["email"] === $_POST["email"] && password_verify($_POST["password"], $usuario["password"])){
-              var_dump($key);
-                return $key; //$usuario;
+    function verificarUsuario($usuarios, $email){
+        foreach ($usuarios as $key3 => $usuario){
+
+            if ($usuarios[$key3]["email"] === $_POST["email"]){
+
+                return $key3; //$usuario;
             }
     }
-    return false;
+    return null;
 }
 
      if ($_POST){
@@ -18,9 +19,9 @@
 
         $usuarios = json_decode($json, true);
 
-        $usuario = verificarUsuario($usuarios, $_POST["email"], $_POST["password"]);
+        $usuario = verificarUsuario($usuarios, $_POST["email"]);
 
-        if(!$usuario){
+        if(is_null($usuario)){
             $error = "Los datos son incorrectos";
         }
         else{
@@ -43,7 +44,7 @@
 
         <body>
         <div id="formulario">
-            <form action="?action=login" method="post">
+            <form action="login.php" method="post">
                 <h2 style="text-align: center"> Log in!</h2>
                 <input type="email" id="inputEmail" class="form-control" placeholder="Email" name="email">
                 <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" name="password">
@@ -55,7 +56,7 @@
                 <hr>
 
                 <input type="submit" value="Si no tenes una cuenta, ingresá acá!">
-                <a href="index.php">Volver a Home</a>
+                <a href="../index.php">Volver a Home</a>
                 </form>
 
 

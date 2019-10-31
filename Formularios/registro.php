@@ -138,7 +138,7 @@ header("location: perfil-usuario.php");
     <button class="registerbtn">Registrate!</button>
 
     <div class="container signin">
-      <p>Ya tenes tu cuenta? <a href="login.html">Logueate acá!</a>.</p>
+      <p>Ya tenes tu cuenta? <a href="login.php">Logueate acá!</a>.</p>
     </div>
 
     <div class="container signin">

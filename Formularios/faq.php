@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FAQ</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="faq1.css">
+    <link rel="stylesheet" href="../css/faq1.css">
 </head>
 <body>
 
@@ -16,7 +16,7 @@
       <div class="card-header" id="headingOne">
         <h2 class="mb-0">
           <button class="btn btn-outline-light" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Pregunta uno?
+            Pregunta 1?
           </button>
         </h2>
       </div>
@@ -45,7 +45,7 @@
       <div class="card-header" id="headingThree">
         <h2 class="mb-0">
           <button class="btn btn-outline-light collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            Pregunta tres?
+            Pregunta 3?
           </button>
         </h2>
       </div>

@@ -36,4 +36,18 @@ color: inherit;
   color: black;
 }
 
+.card .text-center{
+width: 15rem;
+}
 
+.ofertas{
+  padding-top:50px;
+}
+
+.ofertas article{
+  padding-left:10px;
+}
+.masVendidos{
+
+  padding-top:50px;
+}

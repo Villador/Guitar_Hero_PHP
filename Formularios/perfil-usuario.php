@@ -112,13 +112,6 @@ if($_POST){
 
             if (is_null(upload('avatar'))){
 
-              //
-              // if (password_verify($users[$id1], $users[$id1]['avatar'])) {
-              //     echo '¡La contraseña es válida!';
-              // } else {
-              //     echo 'La contraseña no es válida.';
-              // }
-
 
                 $users[$id1]=[
                   'email'=>$_POST['email'],
@@ -170,7 +163,7 @@ if($_POST){
     <meta charset="utf-8">
     <title>Usuario</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="perfilUsuario.css">
+    <link rel="stylesheet" href="../css/perfilUsuario.css">
   </head>
   <body>
 

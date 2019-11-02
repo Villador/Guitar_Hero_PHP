@@ -40,7 +40,7 @@ if (isset($_SESSION['id'])){
 						<title>Home</title>
 						<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	                        <link rel="stylesheet" href="css/header-footer.css">
-                        <link rel="stylesheet" href="css/index.css">
+                        <link rel="stylesheet" href="css/home.css">
 					</head>
 					<body>
 					<div class="contenedor">
@@ -49,7 +49,7 @@ if (isset($_SESSION['id'])){
 					<div class="container-fluid">
 							<!-- esto es el header -->
 
-						<?php require_once("header.php"); ?>
+						<?php include("header.php"); ?>
 
 						<!-- final del header -->
 
@@ -101,36 +101,26 @@ if (isset($_SESSION['id'])){
 							  </div>
 							</div>
 						  </div>
-				</section>
-
-						<section class="articulos">
+						</section class="articulos">
 
 					<div class="row col-12">
 						<div class="col-2">
-
-							<!-- esto es el ASAID -->
 							<section>
-							<?php require_once("asaid.php"); ?>
+
+								<?php include("asaid.php"); ?>
 							</section>
-							<!-- esto es el ASAID -->
-
 						</div>
-
-
 
 						<div class="col-10" style="margin-right=0px;">
 
 
-							<section class="ofertas">
+							<section class="ofertas" style="padding-top:50px;">
 								<div class="row">
 								<h1>Ofertas</h1>
 								</div>
 								<div class="row">
-
-									<?php for ($i=0; $i <4 ; $i++) :?>
-
-								<article class="col-12 col-md-6 col-xl-3">
-										<div class="card text-center" >
+								<article class="col-12 col-md-6 col-xl-3" style="padding-left:10px;">
+										<div class="card text-center" style="width: 15rem;">
 											<a href="product-page1.php">
 												<img src="imagenes/guitarra.jpg" class="card-img-top" alt="...">
 												</a>
@@ -142,23 +132,55 @@ if (isset($_SESSION['id'])){
 											</div>
 
 								</article>
+								<article class="col-12 col-md-6 col-xl-3">
+										<div class="card text-center" style="width: 15rem;">
+											<a href="product-page1.php">
+												<img src="imagenes/guitarra.jpg" class="card-img-top" alt="...">
+												</a>
+												<div class="card-body">
+												<h5 class="card-title">Guitarra</h5>
+												<p class="card-text">Guitarra acústica LesPaul</p>
+												<a href="#" class="btn btn-dark">Comprar!</a>
+												</div>
+											</div>
 
-									<?php endfor ?>
+								</article>
+								<article class="col-12 col-md-6 col-xl-3">
+										<div class="card text-center" style="width: 15rem;">
+											<a href="product-page1.php">
+												<img src="imagenes/guitarra.jpg" class="card-img-top" alt="...">
+												</a>
+												<div class="card-body">
+												<h5 class="card-title">Guitarra</h5>
+												<p class="card-text">Guitarra acústica LesPaul</p>
+												<a href="#" class="btn btn-dark">Comprar!</a>
+												</div>
+											</div>
 
+								</article>
+								<article class="col-12 col-md-6 col-xl-3">
+										<div class="card text-center" style="width: 15rem;">
+											<a href="product-page1.php">
+												<img src="imagenes/guitarra.jpg" class="card-img-top" alt="...">
+												</a>
+												<div class="card-body">
+												<h5 class="card-title">Guitarra</h5>
+												<p class="card-text">Guitarra acústica LesPaul</p>
+												<a href="#" class="btn btn-dark">Comprar!</a>
+												</div>
+											</div>
 
+								</article>
 								</div>
 							</section>
 
-							<section class="masVendidos" >
+							<section class="ofertas" style="padding-top:50px;">
 								<div class="row">
 								<h1>Productos más vendidos</h1>
 								</div>
 								<div class="row">
-
-						<?php for ($i=0; $i <4 ; $i++) :?>
-
 								<article class="col-12 col-md-6 col-xl-3">
-										<div class="card text-center">
+										<div class="card text-center" style="width: 15rem;">
 											<a href="product-page1.php">
 												<img src="imagenes/guitarra.jpg" class="card-img-top" alt="...">
 												</a>
@@ -170,25 +192,97 @@ if (isset($_SESSION['id'])){
 											</div>
 
 								</article>
+								<article class="col-12 col-md-6 col-xl-3">
+										<div class="card text-center" style="width: 15rem;">
+											<a href="product-page1.php">
+												<img src="imagenes/guitarra.jpg" class="card-img-top" alt="...">
+												</a>
+												<div class="card-body">
+												<h5 class="card-title">Guitarra</h5>
+												<p class="card-text">Guitarra acústica LesPaul</p>
+												<a href="#" class="btn btn-dark">Comprar!</a>
+												</div>
+											</div>
 
-						<?php endfor ?>
+								</article>
+								<article class="col-12 col-md-6 col-xl-3">
+										<div class="card text-center" style="width: 15rem;">
+											<a href="product-page1.php">
+												<img src="imagenes/guitarra.jpg" class="card-img-top" alt="...">
+												</a>
+												<div class="card-body">
+												<h5 class="card-title">Guitarra</h5>
+												<p class="card-text">Guitarra acústica LesPaul</p>
+												<a href="#" class="btn btn-dark">Comprar!</a>
+												</div>
+											</div>
 
+								</article>
+								<article class="col-12 col-md-6 col-xl-3">
+										<div class="card text-center" style="width: 15rem;">
+											<a href="product-page1.php">
+												<img src="imagenes/guitarra.jpg" class="card-img-top" alt="...">
+												</a>
+												<div class="card-body">
+												<h5 class="card-title">Guitarra</h5>
+												<p class="card-text">Guitarra acústica LesPaul</p>
+												<a href="#" class="btn btn-dark">Comprar!</a>
+												</div>
+											</div>
+
+								</article>
 								</div>
 							</section>
-
-
 						</div>
 
 					</div>
 
-
-					</section>
 					<!-- COMIENZO FOOTER -->
 					<footer>
+					  <section class="container-fluid">
+					  <div class="row footer-l1">
+					      <div class="col-12 col-md-4">
+					        <a href="Formularios/faq.php"><h5>Preguntas frecuentes!</h5></a>
+					      </div>
+					      <div class="col-12 col-md-4">
+					        <a href="index.php"><img src="imagenes\Logo.png" alt="">  </a>
+					      </div>
+					      <div class="col-12 col-md-4">
+					        <a href="Formularios/contacto.php"><h5>Contactanos</h5></a>
+					      </div>
+
+					  </div>
+
+					  <div class="row footer-l2">
+					    <div class="col-12 col-md-4 seguinos">
+
+					      <div class="row">
+					        <h6>Seguinos</h6>
+					      <!-- </div>
+					      <div class="row"> -->
+					        <div class="redes">
+					          <a href="http://www.facebook.com"><img src="imagenes/iconos/icons8-facebook-old-26.png" alt=""></a>
+					          <a href="http://instagram.com"><img src="imagenes/iconos/icons8-instagram-50.png" alt=""></a>
+					          <a href="http://www.ar.pinterest.com/"><img src="imagenes/iconos/icons8-pinterest-26.png" alt=""></a>
+					          <a href="http://twitter.com"><img src="imagenes/iconos/icons8-twitter-24.png" alt=""></a>
+
+					        </div>
+
+					      </div>
+
+					    </div>
+					    <div class="col-12 col-md-4 trabaja">
+					      <a href="#"><h5>Trabaja Con nosotros</h5>  </a>
+					    </div>
+
+					    <div class="col-12 col-md-4 contactanos">
+					      <a href="#"><h5>+54 11 5263-7400</h5></a>
+					    </div>
 
 
-					<?php require_once("footer.php"); ?>
+					  </div>
 
+					  </section>
 
 					</footer>
 					<!-- FINAL DEL FOOTER -->

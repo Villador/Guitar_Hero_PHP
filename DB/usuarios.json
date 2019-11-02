@@ -182,5 +182,37 @@
         "apellido": "",
         "cumpleanos": "",
         "avatar": "..\/uploads\/2189.jpg"
+    },
+    {
+        "email": "mmm@hotmail.com",
+        "password": "$2y$10$5fX22pZtYWs4L5xfhJ6K6e0K4KocSrVyFBQFscJFjRxrWNlEeKcLW",
+        "nombre": "",
+        "apellido": "",
+        "cumpleanos": "",
+        "avatar": "..\/uploads\/2189.jpg"
+    },
+    {
+        "email": "numaldo@hotmail.com",
+        "password": "$2y$10$5atD1nS\/QyW8c1dIDa1xkemMsydjbvOyvfZTIl5brGBac85Tkb0S.",
+        "nombre": "Numa",
+        "apellido": "",
+        "cumpleanos": "",
+        "avatar": "..\/uploads\/65a1d577ad6b747459ba727fda0234fb.jpg"
+    },
+    {
+        "email": "novusfill@hotmail.com",
+        "password": "$2y$10$J8UmnkDUKObCmRJW58Hcj.Hz\/q8mcFEYO5oQlADxAQKm6DOrU8Vwa",
+        "nombre": "Rosario",
+        "apellido": "Villador",
+        "cumpleanos": "20\/10\/2019",
+        "avatar": "..\/uploads\/00e22213c823434b315cb088eeb84752.jpg"
+    },
+    {
+        "email": "abel@hotmail.com",
+        "password": "$2y$10$od9.0TCV10XHX4\/W7F4TCOlUqGJbTIM47PSolQMR6.U70m3UuWWeG",
+        "nombre": "Numa",
+        "apellido": "Winkler",
+        "cumpleanos": "15\/07\/2019",
+        "avatar": "..\/uploads\/14407ddcfa81d5af6cf8cbfaeb9721b7.jpg"
     }
 ]

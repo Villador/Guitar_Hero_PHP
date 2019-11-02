@@ -51,63 +51,14 @@ $usuarioNombre= nombreUsuario($id);
 <!-- COMIENZO DEL HEADER -->
 <header>
 
-<div class="container-fluid">
+	<div class="container-fluid">
+			<!-- esto es el header -->
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light  ">
-        <a class="navbar-brand" href="index.php"><img  width= "110px"src="imagenes/logo.png" alt=""></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown ">
-        <ul class="navbar-nav mr-auto ">
-          <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Discos
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="section.php">Rock Nacional</a>
-            <a class="dropdown-item" href="section.php">Funk</a>
-            <a class="dropdown-item" href="section.php">Clasicos del los 80</a>
-          </div>
-          </li>
-          <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Audio
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="section.php">Auriculares</a>
-            <a class="dropdown-item" href="section.php">Parlantes</a>
+		<?php require_once("header.php"); ?>
 
-          </div>
-          </li>
-          <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Instrumentos
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="section.php">Guitarras</a>
-            <a class="dropdown-item" href="section.php">Baterias</a>
-            <a class="dropdown-item" href="section.php">Pianos</a>
-          </div>
-          </li>
-        </ul>
-        <div class="menu-derehca navbar-nav mr-1">
-          <a href="<?= $formPerfil ?>"  class="btn btn-outline-secondary btn-sm mr-2"> <?= $usuarioNombre ?></a>
-          <a href="Formularios/registro.php" class="btn btn-outline-secondary btn-sm mr-2"> registrate</a>
-          <a href="Formularios/login.php" class="btn btn-outline-secondary btn-sm mr-2"> log in</a>
-          <a class="btn btn-outline-secondary btn-sm" href="Formularios/carrito.php"><img src="https://img.icons8.com/windows/26/000000/shopping-cart.png"></a>
+		<!-- final del header -->
 
-        </div>
-
-
-
-        </div>
-
-
-      </div>
-      </nav>
-
-</div>
+	</div>
 </header>
   <!-- FINAL DEL HEADER -->
 
@@ -296,7 +247,7 @@ $usuarioNombre= nombreUsuario($id);
 
   <section class="row recomendados">
 
-
+				<?php for ($i=0; $i <4 ; $i++) :?>
           <div class="col-12 col-sm-3">
 
             <div class="card text-center" style="width: 15rem;">
@@ -308,44 +259,9 @@ $usuarioNombre= nombreUsuario($id);
               </div>
             </div>
             </div>
+						<?php endfor ?>
 
-            <div class="col-12 col-sm-3">
-<!-- style="width: 10rem;" -->
-              <div class="card text-center" style="width: 15rem;" >
-                <img src="imagenes/Metallica-Black-Album.jpg" class="card-img-top" alt="Metallica">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-dark">Comprar</a>
-                </div>
-              </div>
-              </div>
-
-            <div class="col-12 col-sm-3">
-
-                <div class="card text-center" style="width: 15rem;">
-                  <img src="imagenes/Metallica-Black-Album.jpg" class="card-img-top" alt="Metallica">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-dark">Comprar</a>
-                  </div>
-                </div>
-                </div>
-
-                <div class="col-12 col-sm-3">
-
-                  <div class="card text-center" style="width: 15rem;">
-                    <img src="imagenes/Metallica-Black-Album.jpg" class="card-img-top" alt="Metallica">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-dark">Comprar</a>
-                    </div>
-                  </div>
-                  </div>
-
-
+            
 
   </section>
 
@@ -355,57 +271,15 @@ $usuarioNombre= nombreUsuario($id);
 </div>
 <!-- FIN SECCION PRINCIPAL DE LA PAGINA -->
 
-<!-- COMIENZO FOOTER -->
+
 <!-- COMIENZO FOOTER -->
 <footer>
-  <section class="container-fluid">
-  <div class="row footer-l1">
-      <div class="col-12 col-md-4">
-        <a href="Formularios/faq.php"><h5>Preguntas frecuentes</h5></a>
-      </div>
-      <div class="col-12 col-md-4">
-        <a href="index.php"><img src="imagenes\Logo.png" alt="">  </a>
-      </div>
-      <div class="col-12 col-md-4">
-        <a href="Formularios/contacto.php"><h5>Contactanos</h5></a>
-      </div>
 
-  </div>
-
-  <div class="row footer-l2">
-    <div class="col-12 col-md-4 seguinos">
-
-      <div class="row">
-        <h6>Seguinos</h6>
-      <!-- </div>
-      <div class="row"> -->
-        <div class="redes">
-          <a href="http://www.facebook.com"><img src="imagenes/iconos/icons8-facebook-old-26.png" alt=""></a>
-          <a href="http://instagram.com"><img src="imagenes/iconos/icons8-instagram-50.png" alt=""></a>
-          <a href="http://www.ar.pinterest.com/"><img src="imagenes/iconos/icons8-pinterest-26.png" alt=""></a>
-          <a href="http://twitter.com"><img src="imagenes/iconos/icons8-twitter-24.png" alt=""></a>
-
-        </div>
-
-      </div>
-
-    </div>
-    <div class="col-12 col-md-4 trabaja">
-      <a href="#"><h5>Trabaja Con nosotros</h5>  </a>
-    </div>
-
-    <div class="col-12 col-md-4 contactanos">
-      <a href="#"><h5>+54 11 5263-7400</h5></a>
-    </div>
-
-
-  </div>
-
-  </section>
+<?php require_once("footer.php"); ?>
 
 </footer>
 <!-- FINAL DEL FOOTER -->
-<!-- FINAL DEL FOOTER -->
+
 
 
 <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->

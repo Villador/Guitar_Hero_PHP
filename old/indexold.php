@@ -1,3 +1,36 @@
+<?php
+session_start();
+
+$usuarioNombre="perfil";
+// var_dump($_COOKIE['remember']);
+
+function nombreUsuario($id1){
+	$jason=file_get_contents('DB/usuarios.json');
+	$usuarios=json_decode($jason,true);
+// var_dump($usuarios[$id1]);
+		return	$usuarios[$id1]['email'];
+
+}
+
+
+if (isset($_COOKIE['remember'])){
+	$id=$_SESSION['id'];
+	$formPerfil="Formularios/perfil-usuario.php";
+	$usuarioNombre= nombreUsuario($id);
+}
+
+if (isset($_SESSION['id'])){
+	$id=$_SESSION['id'];
+	$formPerfil="Formularios/perfil-usuario.php";
+	$usuarioNombre= nombreUsuario($id);
+
+}else {
+	$formPerfil="#";
+}
+
+ ?>
+
+
 					<!DOCTYPE html>
 					<html lang="en">
 					<head>
@@ -15,59 +48,67 @@
 
 					<div class="container-fluid">
 
-							<nav class="navbar navbar-expand-lg navbar-light bg-light  ">
-									<a class="navbar-brand" href="#"><img  width= "110px"src="imagenes/logo.png" alt=""></a>
-									<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-									<span class="navbar-toggler-icon"></span>
-									</button>
-									<div class="collapse navbar-collapse" id="navbarNavDropdown ">
-									<ul class="navbar-nav mr-auto ">
-										<li class="nav-item dropdown">
-										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											Discos
-										</a>
-										<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-											<a class="dropdown-item" href="section.html">Rock Nacional</a>
-											<a class="dropdown-item" href="section.html">Funk</a>
-											<a class="dropdown-item" href="section.html">Clasicos del los 80</a>
-										</div>
-										</li>
-										<li class="nav-item dropdown">
-										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											Audio
-										</a>
-										<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-											<a class="dropdown-item" href="section.html">Auriculares</a>
-											<a class="dropdown-item" href="section.html">Parlantes</a>
+						<nav class="navbar navbar-expand-lg navbar-light bg-light">
+					<a class="navbar-brand" href="#"><img  width= "110px"src="imagenes/logo.png" alt=""></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
 
-										</div>
-										</li>
-										<li class="nav-item dropdown">
-										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											Instrumentos
-										</a>
-										<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-											<a class="dropdown-item" href="section.html">Guitarras</a>
-											<a class="dropdown-item" href="section.html">Baterias</a>
-											<a class="dropdown-item" href="section.html">Pianos</a>
-										</div>
-										</li>
-									</ul>
-									<div class="menu-derehca navbar-nav mr-1">
-										<a href="Formularios/perfil-usuario.html" class="btn btn-outline-secondary btn-sm mr-2"> perfil</a>
-										<a href="Formularios/registro.html" class="btn btn-outline-secondary btn-sm mr-2"> registrate</a>
-										<a href="Formularios/login.html" class="btn btn-outline-secondary btn-sm mr-2"> log in</a>
-										<a class="btn btn-outline-secondary btn-sm "href="Formularios/carrito.html"><img src="https://img.icons8.com/windows/26/000000/shopping-cart.png"></a>
-
-									</div>
-
-
-
-									</div>
-
-
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav mr-auto">
+							<!-- <li class="nav-item active">
+								<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Link</a>
+							</li> -->
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Discos
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<a class="dropdown-item" href="section.php">Rock Nacional</a>
+									<a class="dropdown-item" href="section.php">Funk</a>
+									<a class="dropdown-item" href="section.php">Clasicos del los 80</a>
 								</div>
-								</nav>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Audio
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<a class="dropdown-item" href="section.php">Auriculares</a>
+									<a class="dropdown-item" href="section.php">Parlantes</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Instrumentos
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<a class="dropdown-item" href="section.php">Guitarras</a>
+									<a class="dropdown-item" href="section.php">Baterias</a>
+									<a class="dropdown-item" href="section.phpl">Pianos</a>
+								</div>
+							</li>
+							<!-- <li class="nav-item">
+								<a class="`nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>`
+							</li> -->
+						</ul>
+						<!-- <form class="form-inline my-2 my-lg-0">
+							<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+							<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+						</form> -->
+						<div class="menu-derecha navbar-nav mr-1">
+
+							<a href="<?= $formPerfil ?>" class="btn btn-outline-secondary btn-sm mr-2"> <?= $usuarioNombre ?></a>
+							<a href="Formularios/registro.php" class="btn btn-outline-secondary btn-sm mr-2"> registrate</a>
+							<a href="Formularios/login.php" class="btn btn-outline-secondary btn-sm mr-2"> log in</a>
+							<a class="btn btn-outline-secondary btn-sm "href="Formularios/carrito.php"><img src="https://img.icons8.com/windows/26/000000/shopping-cart.png"></a>
+
+						</div>
+					</div>
+				</nav>
 
 					</div>
 					</header>
@@ -83,21 +124,21 @@
 								</ol>
 								<div class="carousel-inner">
 								  <div class="carousel-item active">
-									<a href="section.html"><img src="imagenes/musico-g.jpg" class="d-block w-100 img-fluid" alt="... " ></a>
+									<a href="section.php"><img src="imagenes/musico-g.jpg" class="d-block w-100 img-fluid" alt="... " ></a>
 									<div class="carousel-caption d-none d-md-block">
 									  <h5>First slide label</h5>
 									  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
 									</div>
 								  </div>
 								  <div class="carousel-item">
-									<a href="section.html"><img src="imagenes/canciones-tocar-guitarra.jpg" class="d-block w-100 img-fluid" alt="..."></a>
+									<a href="section.php"><img src="imagenes/canciones-tocar-guitarra.jpg" class="d-block w-100 img-fluid" alt="..."></a>
 									<div class="carousel-caption d-none d-md-block">
 									  <h5>Second slide label</h5>
 									  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 									</div>
 								  </div>
 								  <div class="carousel-item">
-									<a href="section.html"><img src="imagenes/tocar-guitarra.jpg" class="d-block w-100 img-fluid" alt="..."></a>
+									<a href="section.php"><img src="imagenes/tocar-guitarra.jpg" class="d-block w-100 img-fluid" alt="..."></a>
 									<div class="carousel-caption d-none d-md-block">
 									  <h5>Third slide label</h5>
 									  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
@@ -122,16 +163,16 @@
 							<section>
 									<nav class="nav flex-column d-none d-sm-block" style="padding-top: 50px;">
 											<h5 class="ml-2">Discos</h5>
-		<a class="nav-link active" href="section.html">Rock Nacional</a>
-		<a class="nav-link" href="section.html">Funk</a>
-		<a class="nav-link" href="section.html">Clasicos de los 80</a>
+		<a class="nav-link active" href="section.php">Rock Nacional</a>
+		<a class="nav-link" href="section.php">Funk</a>
+		<a class="nav-link" href="section.php">Clasicos de los 80</a>
 		<h5>Audio</h5>
-		<a class="nav-link active" href="section.html">Auriculares</a>
-		<a class="nav-link active" href="section.html">Parlantes</a>
+		<a class="nav-link active" href="section.php">Auriculares</a>
+		<a class="nav-link active" href="section.php">Parlantes</a>
 		<h5>Instrumentos</h5>
-		<a class="nav-link active" href="section.html">Guitarras</a>
-		<a class="nav-link active" href="section.html">Baterias</a>
-		<a class="nav-link active" href="section.html">Pianos</a>
+		<a class="nav-link active" href="section.php">Guitarras</a>
+		<a class="nav-link active" href="section.php">Baterias</a>
+		<a class="nav-link active" href="section.php">Pianos</a>
 										</nav>
 							</section>
 						</div>
@@ -146,7 +187,7 @@
 								<div class="row">
 								<article class="col-12 col-md-6 col-xl-3" style="padding-left:10px;">
 										<div class="card text-center" style="width: 15rem;">
-											<a href="product-page1.html">
+											<a href="product-page1.php">
 												<img src="imagenes/guitarra.jpg" class="card-img-top" alt="...">
 												</a>
 												<div class="card-body">
@@ -159,7 +200,7 @@
 								</article>
 								<article class="col-12 col-md-6 col-xl-3">
 										<div class="card text-center" style="width: 15rem;">
-											<a href="product-page1.html">
+											<a href="product-page1.php">
 												<img src="imagenes/guitarra.jpg" class="card-img-top" alt="...">
 												</a>
 												<div class="card-body">
@@ -172,7 +213,7 @@
 								</article>
 								<article class="col-12 col-md-6 col-xl-3">
 										<div class="card text-center" style="width: 15rem;">
-											<a href="product-page1.html">
+											<a href="product-page1.php">
 												<img src="imagenes/guitarra.jpg" class="card-img-top" alt="...">
 												</a>
 												<div class="card-body">
@@ -185,7 +226,7 @@
 								</article>
 								<article class="col-12 col-md-6 col-xl-3">
 										<div class="card text-center" style="width: 15rem;">
-											<a href="product-page1.html">
+											<a href="product-page1.php">
 												<img src="imagenes/guitarra.jpg" class="card-img-top" alt="...">
 												</a>
 												<div class="card-body">
@@ -206,7 +247,7 @@
 								<div class="row">
 								<article class="col-12 col-md-6 col-xl-3">
 										<div class="card text-center" style="width: 15rem;">
-											<a href="product-page1.html">
+											<a href="product-page1.php">
 												<img src="imagenes/guitarra.jpg" class="card-img-top" alt="...">
 												</a>
 												<div class="card-body">
@@ -219,7 +260,7 @@
 								</article>
 								<article class="col-12 col-md-6 col-xl-3">
 										<div class="card text-center" style="width: 15rem;">
-											<a href="product-page1.html">
+											<a href="product-page1.php">
 												<img src="imagenes/guitarra.jpg" class="card-img-top" alt="...">
 												</a>
 												<div class="card-body">
@@ -232,7 +273,7 @@
 								</article>
 								<article class="col-12 col-md-6 col-xl-3">
 										<div class="card text-center" style="width: 15rem;">
-											<a href="product-page1.html">
+											<a href="product-page1.php">
 												<img src="imagenes/guitarra.jpg" class="card-img-top" alt="...">
 												</a>
 												<div class="card-body">
@@ -245,7 +286,7 @@
 								</article>
 								<article class="col-12 col-md-6 col-xl-3">
 										<div class="card text-center" style="width: 15rem;">
-											<a href="product-page1.html">
+											<a href="product-page1.php">
 												<img src="imagenes/guitarra.jpg" class="card-img-top" alt="...">
 												</a>
 												<div class="card-body">
@@ -267,13 +308,13 @@
 					  <section class="container-fluid">
 					  <div class="row footer-l1">
 					      <div class="col-12 col-md-4">
-					        <a href="Formularios/faq.html"><h5>Preguntas frecuentes!</h5></a>
+					        <a href="Formularios/faq.php"><h5>Preguntas frecuentes!</h5></a>
 					      </div>
 					      <div class="col-12 col-md-4">
-					        <a href="home.html"><img src="imagenes\Logo.png" alt="">  </a>
+					        <a href="index.php"><img src="imagenes\Logo.png" alt="">  </a>
 					      </div>
 					      <div class="col-12 col-md-4">
-					        <a href="Formularios/contacto.html"><h5>Contactanos</h5></a>
+					        <a href="Formularios/contacto.php"><h5>Contactanos</h5></a>
 					      </div>
 
 					  </div>

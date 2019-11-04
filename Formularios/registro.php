@@ -5,17 +5,10 @@ session_start();
 $email = "";
 $password = "";
 $errors=[];
+$avatarGenerico="../uploads/2189.jpg";
 
-function verificarUsuario($email){
-  $jason=file_get_contents("../DB/usuarios.json");
-  $usuarios=json_decode($jason,true);
-  foreach ($usuarios as $usuario) {
-    if($usuario['email'] == $email){
-      return true;
-    }
-  }
-return false;
-}
+require_once("../funciones/funciones.php");
+
 
 $cartelError1="";
 $cartelError2="";
@@ -62,20 +55,23 @@ if (! filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
 
 if(empty($errors)){
 
-$json=file_get_contents('../DB/usuarios.json');
-$users=json_decode($json,true);
+// $json=file_get_contents('../DB/usuarios.json');
+// $users=json_decode($json,true);
+$users=getjson('usuarios.json');
+
+$ecncriptado=encripta($avatarGenerico);
 $users[]=[
   'email'=>$_POST['email'],
   'password'=> password_hash($_POST['password'],PASSWORD_DEFAULT),
   'nombre'=>isset($_POST['nombre']) ? $_POST['nombre']:'',
   'apellido'=>isset($_POST['apellido']) ? $_POST['nombre']:'',
   'cumpleanos'=>isset($_POST['cumpleanos']) ? $_POST['nombre']:'',
-  'avatar'=>"../uploads/2189.jpg" //isset($_POST['avatar']) ? $_POST['nombre']:'',
+  'avatar'=> $avatarGenerico // $ecncriptado //isset($_POST['avatar']) ? $_POST['nombre']:'',
 ];
+$path="../uploads/$ecncriptado";
+move_uploaded_file($avatarGenerico,$path);
+putjson($users,'usuarios.json');
 
-
-$json=json_encode($users,JSON_PRETTY_PRINT);
-$json=file_put_contents('../DB/usuarios.json',$json);
 
 // var_dump($_POST);
 // envio a pagina de perfil del usuario
@@ -105,6 +101,9 @@ header("location: perfil-usuario.php");
 }
 
 ?>
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">

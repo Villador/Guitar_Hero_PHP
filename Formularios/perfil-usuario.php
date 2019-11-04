@@ -1,14 +1,16 @@
 <?php
 session_start();
 $disabled=true;
-// var_dump($_COOKIE['remember']);
+
+  require_once("../funciones/funciones.php");
+$foto="";
+
 
 if (isset($_SESSION['id'])){
-  // var_dump( $_SESSION['id']);
-  $id = $_SESSION['id'];
-  $json=file_get_contents('../DB/usuarios.json');
 
-  $usuarios=json_decode($json,true);
+  $id = $_SESSION['id'];
+
+  $usuarios=getJson('usuarios.json');
   $usuario=$usuarios[$id];
 
 
@@ -24,27 +26,8 @@ if (isset($_SESSION['id'])){
     }
   }
 
-}else {
-
-
 }
 
-function upload($name,$dir='../uploads'){
-  var_dump($_FILES[$name]);
-    if(isset($_FILES[$name])){
-      $ext=pathinfo($_FILES[$name]['name'], PATHINFO_EXTENSION);
-      $hash=  md5(time(). $_FILES[$name]['tmp_name']);
-      $path="$dir/$hash.$ext";
-      move_uploaded_file($_FILES[$name]['tmp_name'],$path);
-
-      return $path ;
-    }
-
-    return null;
-}
-
-
- // var_dump($_POST);
 
 
 if($_POST){
@@ -60,10 +43,6 @@ if($_POST){
   }
 
 
-
-// var_dump($_POST);
-
-
 //primero validar los datos
   if(isset($_POST['grabar'])){
 
@@ -75,72 +54,41 @@ if($_POST){
             $email= $_POST['email'];
             $nombre=$_POST['nombre'];
             $apellido=$_POST['apellido'];
-            // $avatar=$_POST['avatar'];
-            // $password=$_POST['password'];
-
-          if($_POST['password']!=$_POST['password_confirmation']){
-
-            $errors['password_confirmation']='el password no coincide';
-          }else{
-
-            if(strlen($_POST['password'])<8){
-
-              $errors['password']='el password debe tener mas de 8 digitos';
-            }else {
-
-                if (ctype_digit($_POST['password']{0})){
-                  $errors['password_confirmation']='el password debe comenzar con un digito alfabetico';
-                }
-
-            }
-
-          }
 
 
         if(empty($errors)){
 
-        $json=file_get_contents('../DB/usuarios.json');
-        $users=json_decode($json,true);
+          $users=getJson('usuarios.json');
 
             foreach ($users as $key2 => $value) {
               if($users[$key2]['email'] === $_POST['email']){
-              $id1  =$key2;
+                $id1  =$key2;
+                $usuario=$users[$id1];
+                // echo $usuario['nombre'];
 
               }
             }
 
 
-            if (is_null(upload('avatar'))){
+              $foto=upload('avatar');
 
 
-                $users[$id1]=[
-                  'email'=>$_POST['email'],
-                  'password'=> password_hash($_POST['password'],PASSWORD_DEFAULT),
-                  'nombre'=>isset($_POST['nombre']) ? $_POST['nombre']:'',
-                  'apellido'=>isset($_POST['apellido']) ? $_POST['apellido']:'',
-                  'cumpleanos'=>isset($_POST['cumpleanos']) ? $_POST['cumpleanos']:'',
+        $users[$id1]=[
+          'email'=>$_POST['email'],
+          'password'=> password_hash($_POST['password'],PASSWORD_DEFAULT),
+          'nombre'=>isset($_POST['nombre']) ? $_POST['nombre']:'',
+          'apellido'=>isset($_POST['apellido']) ? $_POST['apellido']:'',
+          'cumpleanos'=>isset($_POST['cumpleanos']) ? $_POST['cumpleanos']:'',
+          'avatar'=>$foto, //upload('avatar'),
 
-                ];
-
-
-
-            }  else{
-              $users[$id1]=[
-                'email'=>$_POST['email'],
-                'password'=> password_hash($_POST['password'],PASSWORD_DEFAULT),
-                'nombre'=>isset($_POST['nombre']) ? $_POST['nombre']:'',
-                'apellido'=>isset($_POST['apellido']) ? $_POST['apellido']:'',
-                'cumpleanos'=>isset($_POST['cumpleanos']) ? $_POST['cumpleanos']:'',
-                'avatar'=> upload('avatar'),
-              ];
-            }
+        ];
 
 
-        $json=json_encode($users,JSON_PRETTY_PRINT);
-        $json=file_put_contents('../DB/usuarios.json',$json);
+            putjson($users,'usuarios.json');
+
 
         // var_dump($_POST);
-          $_SESSION['id'] = count($users)-1;
+          $_SESSION['id'] = $id1; //count($users)-1;
 
 
           header('Location: perfil-usuario.php');
@@ -164,10 +112,9 @@ if($_POST){
     <title>Usuario</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/perfilUsuario.css">
+
   </head>
   <body>
-
-
 
     <section id="wrapper">
 
@@ -200,7 +147,7 @@ if($_POST){
             <div class="col-md-3 form-control-valign">
 
                   <div class="foto">
-                    <img src="<?= $usuario['avatar'] ?>" alt="avatar" style="border-radius:50%; width: 100px";>
+                    <img src="<?= $usuario['avatar'] ?>" alt="avatar">
 
                   </div>
 
@@ -266,6 +213,7 @@ if($_POST){
         <label class="col-md-3 form-control-label required">
                   Correo electrónico
               </label>
+
         <div class="col-md-6">
 
               <input
@@ -283,7 +231,7 @@ if($_POST){
       </div>
 
     <div class="form-group row ">
-        <label class="col-md-3 form-control-label required">
+        <label class="col-md-3 form-control-label required ">
                   Contraseña
               </label>
         <div class="col-md-6">
@@ -297,65 +245,31 @@ if($_POST){
                   value="<?= $usuario['password'] ?>" <?= $disabled ? 'disabled' : '' ?>
 
                              >
-                <span class="input-group-btn">
-                  <button
-                    class="btn"
-                    type="button"
-                    data-action="show-password"
-                    data-text-show="Mostrar"
-                    data-text-hide="Ocultar"
-                  >
-                    Mostrar
-                  </button>
-                </span>
+
               </div>
 
         </div>
 
         <div class="col-md-3 form-control-comment">
-
+            <span class="input-group-btn">
+              <button
+                class="btn"
+                type="button"
+                data-action="show-password"
+                data-text-show="Mostrar"
+                data-text-hide="Ocultar"
+              >
+                Cambiar
+              </button>
+            </span>
         </div>
       </div>
 
-      <div class="form-group row ">
-        <label class="col-md-3 form-control-label">
-                  Nueva contraseña
-              </label>
-        <div class="col-md-6">
 
-
-
-              <div class="input-group js-parent-focus">
-                <input
-                  class="form-control js-child-focus js-visible-password"
-                  name="password_confirmation"
-                  type="password"
-                  value="<?= $usuario['password'] ?>" <?= $disabled ? 'disabled' : '' ?>
-
-                              >
-                <span class="input-group-btn">
-                  <button
-                    class="btn"
-                    type="button"
-                    data-action="show-password"
-                    data-text-show="Mostrar"
-                    data-text-hide="Ocultar"
-                  >
-                    Mostrar
-                  </button>
-                </span>
-              </div>
-
-        </div>
-
-        <div class="col-md-3 form-control-comment">
-                     Opcional
-        </div>
-      </div>
 
       <div class="form-group row ">
         <label class="col-md-3 form-control-label">
-                  Fecha de nacimiento
+                  Fecha de nacimiento (Opcional)
               </label>
         <div class="col-md-6">
 
@@ -365,16 +279,14 @@ if($_POST){
                 type="text"
                 value="<?= $usuario['cumpleanos'] ?>"
                 placeholder="DD/MM/YYYY"                                  >
-                          <span class="form-control-comment">
-                  (Ejemplo: 31/05/1970)
-                </span>
+
 
 
         </div>
 
         <div class="col-md-3 form-control-comment">
 
-                     Opcional
+                    <label class="opcional "for="">(Ej:: 31/05/1970)</label>
 
         </div>
 

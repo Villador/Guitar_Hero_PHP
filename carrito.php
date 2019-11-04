@@ -14,7 +14,7 @@ function nombreUsuario($id1){
 
 if (isset($_SESSION['id'])){
 $id=$_SESSION['id'];
-$formPerfil="perfil-usuario.php";
+$formPerfil="Formularios/perfil-usuario.php";
 $usuarioNombre= nombreUsuario($id);
 
 

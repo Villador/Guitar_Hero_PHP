@@ -23,9 +23,11 @@ if (isset($_SESSION['id'])){
 	$id=$_SESSION['id'];
 	$formPerfil="Formularios/perfil-usuario.php";
 	$usuarioNombre= nombreUsuario($id);
+	$formCarrito="carrito.php";
 
 }else {
 	$formPerfil="#";
+	$formCarrito="#";
 }
 
  ?>

@@ -69,8 +69,11 @@ if($_POST){
               }
             }
 
-
+            if(strlen($_FILES['avatar']['name']) != 0){
               $foto=upload('avatar');
+            }else{
+              $foto=$usuario['avatar'];
+            }
 
 
         $users[$id1]=[

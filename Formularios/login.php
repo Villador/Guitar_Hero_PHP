@@ -2,12 +2,14 @@
 
     session_start();
 
-    function verificarUsuario($usuarios, $email){
+    function verificarUsuario($usuarios, $email, $password){
         foreach ($usuarios as $key3 => $usuario){
 
             if ($usuarios[$key3]["email"] === $_POST["email"]){
+                if(password_verify($password,$usuarios[$key3]["password"])){
+                  return $key3; //$usuario;
+                }
 
-                return $key3; //$usuario;
             }
     }
     return null;
@@ -19,7 +21,9 @@
 
         $usuarios = json_decode($json, true);
 
-        $usuario = verificarUsuario($usuarios, $_POST["email"]);
+        $usuario = verificarUsuario($usuarios, $_POST["email"],$_POST["password"]);
+        //var_dump($usuario);
+      //  die;
 
         if(is_null($usuario)){
             $error = "Los datos son incorrectos";

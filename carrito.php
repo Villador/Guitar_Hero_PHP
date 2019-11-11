@@ -18,9 +18,12 @@ $formPerfil="Formularios/perfil-usuario.php";
 $usuarioNombre= nombreUsuario($id);
 
 
-
 }else {
 	$formPerfil="#";
+	$formCarrito="index.php";
+
+
+	header("Location:index.php");
 }
 
  ?>

@@ -17,6 +17,12 @@ $id=$_SESSION['id'];
 $formPerfil="Formularios/perfil-usuario.php";
 $usuarioNombre= nombreUsuario($id);
 
+if(isset($_GET['log'])){
+	if (logOut($_GET['log'])){
+		header('location:index.php');
+	}
+
+}
 
 }else {
 	$formPerfil="#";

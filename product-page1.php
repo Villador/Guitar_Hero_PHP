@@ -1,25 +1,28 @@
 <?php
 session_start();
-
+require_once("funciones/funciones.php");
 $usuarioNombre="perfil";
 
-function nombreUsuario($id1){
-	$jason=file_get_contents('DB/usuarios.json');
-	$usuarios=json_decode($jason,true);
 
-		return	$usuarios[$id1]['email'];
-
-}
 
 if (isset($_SESSION['id'])){
 $id=$_SESSION['id'];
 $formPerfil="Formularios/perfil-usuario.php";
 $usuarioNombre= nombreUsuario($id);
 
+$formCarrito="carrito.php";
 
+
+if(isset($_GET['log'])){
+	if (logOut($_GET['log'])){
+		header('location:index.php');
+	}
+
+}
 
 }else {
 	$formPerfil="#";
+	$formCarrito="#";
 }
 
  ?>
@@ -203,7 +206,7 @@ $usuarioNombre= nombreUsuario($id);
 
 
             <div class="product-button-comprar">
-              <a href="Formularios/carrito.html">COMPRAR</a>
+              <a href="carrito.php">COMPRAR</a>
             </div>
 
             </div>
@@ -261,7 +264,7 @@ $usuarioNombre= nombreUsuario($id);
             </div>
 						<?php endfor ?>
 
-            
+
 
   </section>
 

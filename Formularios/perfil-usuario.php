@@ -38,6 +38,7 @@ if($_POST){
 
         $disabled=false;
       }else {
+
         $disabled=true;
       }
   }
@@ -233,40 +234,7 @@ if($_POST){
         </div>
       </div>
 
-    <div class="form-group row ">
-        <label class="col-md-3 form-control-label required ">
-                  Contraseña
-              </label>
-        <div class="col-md-6">
 
-
-              <div class="input-group js-parent-focus">
-                <input
-                  class="form-control js-child-focus js-visible-password"
-                  name="password"
-                  type="password"
-                  value="<?= $usuario['password'] ?>" <?= $disabled ? 'disabled' : '' ?>
-
-                             >
-
-              </div>
-
-        </div>
-
-        <div class="col-md-3 form-control-comment">
-            <span class="input-group-btn">
-              <button
-                class="btn"
-                type="button"
-                data-action="show-password"
-                data-text-show="Mostrar"
-                data-text-hide="Ocultar"
-              >
-                Cambiar
-              </button>
-            </span>
-        </div>
-      </div>
 
 
 
@@ -302,29 +270,37 @@ if($_POST){
       <div class="form-group row ">
 
         <?php if (!$disabled): ?>
-          <div class="col-md-4 form-control-label boton_editar">
+          <div class="col-md-3 form-control-label boton_editar">
             <input type="hidden" name="grabar" value="1">
             <button type="submit" class="btn btn-dark">Grabar</button>
 
 
           </div>
-          <div class="col-md-4 form-control-label boton_editar">
+          <div class="col-md-3 form-control-label boton_editar">
             <input type="hidden" name="disabled" value="1">
-            <button class="btn btn-dark">Cancelar Edicion</button>
+            <button class="btn btn-dark">Cancelar Editar</button>
+
+
+          </div>
+          <div class="col-md-3 form-control-label boton_editar">
+            <input type="hidden" name="disabled" value="0">
+            <button class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">Cambiar Pass</button>
+
+            <!-- Modal -->
 
 
           </div>
 
 
         <?php else: ?>
-          <div class="col-md-8 form-control-label boton_editar">
+          <div class="col-md-9 form-control-label boton_editar">
           <input type="hidden" name="disabled" value="0">
           <button class="btn btn-dark">Editar</button>
           </div>
         <?php endif ?>
 
-              <div class="col-md-4 " >
-                <p><a href="../index.php">Volver al Home!</a></p>
+              <div class="col-md-3 " >
+                <p><a href="../index.php">Volver a Home!</a></p>
               </div>
 
     <!-- <a href="../home.html"><h6>volver a HOME</h6></a> -->

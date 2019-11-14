@@ -1,16 +1,10 @@
 <?php
-session_start();
 
+session_start();
+require_once("funciones/funciones.php");
 $usuarioNombre="perfil";
 // var_dump($_COOKIE['remember']);
 
-function nombreUsuario($id1){
-	$jason=file_get_contents('DB/usuarios.json');
-	$usuarios=json_decode($jason,true);
-// var_dump($usuarios[$id1]);
-		return	$usuarios[$id1]['email'];
-
-}
 
 
 if (isset($_COOKIE['remember'])){
@@ -24,6 +18,13 @@ if (isset($_SESSION['id'])){
 	$formPerfil="Formularios/perfil-usuario.php";
 	$usuarioNombre= nombreUsuario($id);
 	$formCarrito="carrito.php";
+
+	if(isset($_GET['log'])){
+		if (logOut($_GET['log'])){
+			header('location:index.php');
+		}
+
+	}
 
 }else {
 	$formPerfil="#";

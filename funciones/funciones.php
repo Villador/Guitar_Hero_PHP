@@ -60,10 +60,30 @@ function upload($name,$dir='../uploads'){
 
       $path="$dir/$ecncriptado";
       move_uploaded_file($_FILES[$name]['tmp_name'],$path);
-      
+
       return $path ;
     }
 
     return null;
+}
+
+function nombreUsuario($id1){
+	$jason=file_get_contents('DB/usuarios.json');
+	$usuarios=json_decode($jason,true);
+// var_dump($usuarios[$id1]);
+		return	$usuarios[$id1]['email'];
+
+}
+
+function logOut($log){
+  if($log==0){
+
+    session_unset();
+    session_destroy();
+    return true;
+
+
+  }
+  return false;
 }
  ?>
